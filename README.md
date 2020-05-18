@@ -1,10 +1,10 @@
 # Semestr I
 * Wstęp do programowania w języku C
-        wykład: Marek Piotrów
-        pracownia: Marek Szykuła
+       * wykład: Marek Piotrów
+       * pracownia: Marek Szykuła
 * Logika dla informatyków
-        wykład: Witold Charatonik
-        ćwiczenia: rotacja
+       * wykład: Witold Charatonik
+       * ćwiczenia: rotacja
 * Analiza matematyczna:
         wykład: Maciej Paluszyński
         ćwiczenia: Yuriy Kryakin
