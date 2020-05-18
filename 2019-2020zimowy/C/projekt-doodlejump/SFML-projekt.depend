@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1581092164 source:/home/kacper/Pulpit/programowanie/SFMLLINUX2/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<time.h>
+
+1581586711 source:/home/kacper/Pulpit/programowanie/SFML-projekt/main.cpp
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<time.h>
+	<unistd.h>
+
