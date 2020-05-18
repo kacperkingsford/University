@@ -1,0 +1,51 @@
+#lang racket
+
+(provide cube-root)
+
+(define (cube-root x)
+  
+  (define (improve approx)
+  
+    (define (square)
+      (* approx approx))
+    
+  (/ (+ (/ x (square)) (* 2 approx)) 3))
+    
+  (define (iter y)
+
+    (define (cube z)
+      (* z z z))
+
+    (define (difference)
+      (abs (- x (cube y))))
+    
+    (define (good-enough?)
+      (< (difference) 0.000001))
+    
+    (cond
+      [(good-enough?) y]
+      [else (iter (improve y))]))
+
+  (iter 1.0))
+
+
+(cube-root 27)
+(cube-root 64)
+(cube-root 1)
+(cube-root -1)
+(cube-root 125)
+(cube-root 0.001)
+(cube-root -0.000216)
+
+;Wzorowałem się na wykładzie i podręczniku.
+
+
+    
+   
+
+   
+     
+    
+
+  
+ 

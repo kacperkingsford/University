@@ -1,0 +1,25 @@
+#lang racket
+
+(define (nth-root_1 n y damp_count)
+  (define (repeated p n)
+    (define (compose f g)
+      (lambda (x)
+        (f (g x))))
+    (if (= n 0)
+        p 
+       (compose p (repeated p (- n 1)))))
+
+  (define (fixed-point f x)
+    (define (close-enough? a b)
+      (< abs (- a b) 0.0001))
+    (cond
+      ((close-enough? x (f x)) x)
+      (else (fixed-point f (f x)))))
+
+  (define (average-damp f)
+    (lambda (x) (/ (+ x (f x)) 2)))
+
+  (if (= y 0)
+      0.0
+      (fixed-point ((repeated average-damp damp_count) (lambda (x) (/ y (expt y damp_count)))) 1.0)))
+    

@@ -1,0 +1,44 @@
+#lang racket
+
+(struct complex (re im) #:transparent)
+(struct irr () #:transparent) ; stala i
+
+(define value?
+  complex?)
+
+;; Ponizej znajduje sie interpreter zwyklych wyrazen arytmetycznych.
+;; Zadanie to zmodyfikowac go tak, by dzialal z liczbami zespolonymi.
+
+(struct const (val)    #:transparent)
+(struct binop (op l r) #:transparent)
+
+(define (op->proc op)
+  (match op ['+ +] ['- -] ['* *] ['/ /]))
+
+(define (eval e)
+  (match e
+    [(const n) (complex n 0)]
+    [(irr) (complex 0 1)]
+    [(binop '* (irr) (irr)) (complex -1 0)]
+    [(binop '+ (irr) (irr)) (complex 0 2)]
+    [(binop '- (irr) (irr)) (complex 0 0)]
+    [(binop '/ (irr) (irr)) (complex 1 0)]
+    [(binop op (const l) (const r)) (complex ((op->proc op) l r) 0)]
+    [(binop '+ (complex re1 im1) (complex re2 im2)) (complex (+ re1 re2) (+ im1 im2))]
+    [(binop '- (complex re1 im1) (complex re2 im2)) (complex (- re1 re2) (- im1 im2))]
+    [(binop '* (complex a b) (complex c d)) (complex (- (* a c) (* b d)) (+ (* b c) (* a d)))]
+    [(binop '/ (complex a b) (complex c d))
+    (let [(m (+ (* c c) (* d d)))] 
+    (complex (/ (+ (* a c) (* b d)) m) (/ (- (* b c) (* a d)) m)))]
+    [(binop op l r) (eval (binop op (eval l) (eval r)))]
+    ))
+
+(define (parse q)
+  (cond [(number? q) (const q)]
+        [(eq? q 'i)  (irr)]
+        [(and (list? q) (eq? (length q) 3) (symbol? (first q)))
+         (binop (first q) (parse (second q)) (parse (third q)))]))
+
+
+;;Współpracowywałem z Adamem Jarząbkiem podczas tworzenia powyższego rozwiązania.
+         

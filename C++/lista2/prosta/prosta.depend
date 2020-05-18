@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1583608735 source:/home/kacper/Pulpit/programowanie/C++/lista2/prosta/prosta.cpp
+	"prosta.hpp"
+	<iostream>
+	<cmath>
+
+1583607427 /home/kacper/Pulpit/programowanie/C++/lista2/prosta/prosta.hpp
+
+1583608703 source:/home/kacper/Pulpit/programowanie/C++/lista2/prosta/main.cpp
+	"prosta.hpp"
+	<iostream>
+

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1583153719 source:/home/kacper/Pulpit/programowanie/PO /lista1/figures/figure.c
+	"figure.h"
+
+1583169566 /home/kacper/Pulpit/programowanie/PO /lista1/figures/figure.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1583169055 source:/home/kacper/Pulpit/programowanie/PO /lista1/figures/main.c
+	"figure.h"
+

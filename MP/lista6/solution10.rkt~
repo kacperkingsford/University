@@ -1,0 +1,44 @@
+#lang racket
+
+(struct const (val)    #:transparent)
+(struct binop (op l r) #:transparent)
+(struct complex (re im) #:transparent)
+(struct i () #:transparent)
+
+
+(define (expr? e)
+  (match e
+    [(const n) (number? n)]
+    [(binop op l r) (and (symbol? op) (expr? l) (expr? r))]
+    [(i) true]
+    [_ false]))
+
+(define (value? v)
+  (complex? v))
+
+(define (op->proc op)
+  (match op ['+ +] ['- -] ['* *] ['/ /]))
+
+(define (eval e)
+  (match e
+    [(complex re im) e]
+    [(const n) (complex n 0)]
+    [(i) (complex 0 1)]
+    [(binop op (const n) (const t)) (complex ((op->proc op) n t) 0)]
+    [(binop op (complex re im) (const t)) (complex ((op->proc op) re t) im)]
+    [(binop op (const n) (complex re im)) (complex ((op->proc op) n re) im)]
+    [(binop op (complex re1 im1) (complex re2 im2)) (complex ((op->proc op) re1 re2) ((op->proc op) im1 im2))]
+    [(binop op l r) (eval (binop op (eval l) (eval r)))  ]
+    ))
+
+; ------------------------- ;
+; Trochę składni konkretnej ;
+; ------------------------- ;
+
+(define (parse q)
+  (cond [(number? q) (const q)]
+        [(eq? q 'i) (i)]
+        [(and (list? q) (eq? (length q) 3) (symbol? (first q)))
+         (binop (first q) (parse (second q)) (parse (third q)))]))
+
+(define (test) (eval (parse '(+ (* 2 3) (* 4 5)))))

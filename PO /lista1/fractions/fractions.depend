@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1582839677 source:/home/kacper/Pulpit/programowanie/fractions/fractions.c
+	"fractions.h"
+
+1582839859 /home/kacper/Pulpit/programowanie/fractions/fractions.h
+	<stdio.h>
+	<stdlib.h>
+
+1582839807 source:/home/kacper/Pulpit/programowanie/fractions/main.c
+	"fractions.h"
+
+1582835713 /home/kacper/Pulpit/programowanie/fractions/fractions.c
+	"fractions.h"
+
+1582839807 source:/home/kacper/Pulpit/programowanie/PO /fractions/main.c
+	"fractions.h"
+
+1582839859 /home/kacper/Pulpit/programowanie/PO /fractions/fractions.h
+	<stdio.h>
+	<stdlib.h>
+
+1582840174 source:/home/kacper/Pulpit/programowanie/PO /lista1/fractions/main.c
+	"fractions.h"
+
+1582839859 /home/kacper/Pulpit/programowanie/PO /lista1/fractions/fractions.h
+	<stdio.h>
+	<stdlib.h>
+
+1582840174 source:/home/kacper/Pulpit/programowanie/PO /lista1/fractions/fractions.c
+	"fractions.h"
+

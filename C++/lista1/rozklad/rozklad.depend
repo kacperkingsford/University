@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1582988392 source:/home/kacper/Pulpit/programowanie/C++/lista1/rozklad/main.cpp
+	<iostream>
+	<string>
+	<cmath>
+	<limits>
+	<vector>
+

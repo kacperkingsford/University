@@ -1,0 +1,59 @@
+a) Własność P(xs) : (map f (append xs ys)) = (append (map f xs) (map f ys))
+(Podstawa indukcji):
+P(null) : (map f (append null ys)) = (append (map f null) (map f ys))
+	  (map f ys) = (append null (map f ys)
+	  (map f ys) = (map f ys) -> OK.
+Weźmy dowolne x,xs. Załóżmym że zachodzi P(xs). Pokażę, że zachodzi P((cons x xs)).
+P((cons x xs)): 
+Przekształćmy każdą ze stron osobno :
+Prawa strona: (append (map f (cons x xs)) (map f ys) -> z definicji map =
+	      = (append (cons (f (car (cons x xs))) (map f (cdr (cons x xs))) (map f ys)) =
+              = (append (cons (f x) (map f xs)) (map f ys)) -> z definicji append
+	      = (cons (f x) (append (map f xs) (map f ys))) -> z zalozenia ind. że (map f (append xs ys)) = (append (map f xs) (map f ys))
+	      = (cons (f x) (map f (append xs ys)).
+Lewa strona:  (map f (append (cons x xs) ys)) ->z definicji append
+	      = (map f (cons (car (cons x xs)) (append (cdr (cons x xs) ys) =
+	      = (map f (cons x (append xs ys))) ->z definicji map
+	      = (cons (f (car (cons x (append xs ys)))) (map f (cdr (cons x (append xs ys)))) =
+	      = (cons (f x) (map f (append xs ys))).
+
+Zatem doprowadziliśmy do postaci takiej, że prawa i lewa strona własności P((cons x xs)) są równoważne, zatem na mocy zasady indukcji dla list
+dostajemy, że dla dowolnego xs (takiego, że zachodzi (list? xs)) zachodzi P(xs).
+
+
+b) Własność P(xs) : (filter p? (append xs ys)) = (append (filter p? xs) (filter p? ys))
+(Podstawa indukcji):
+P(null) : (filter p? (append null ys)) = (append (filter p? null) (filter p? ys))
+	  (filter p? ys) = (append null (filter p? ys))
+	  (filter p? ys) = (filter p? ys) -> OK.
+Weźmy dowolne x,xs. Załóżmym że zachodzi P(xs). Pokażę, że zachodzi P((cons x xs)).
+P((cons x xs)): 
+Przekształćmy prawą stronę : 
+	      = (append (filter p? (cons x xs)) (filter p? ys)) -> z definicji append
+              = (cons (car (filter p? (cons x xs))) (append (cdr (filter p? (cons x xs)) (filter p? ys)) 
+		Rozpatrzmy dwa przypadki :
+		(1) p? (car (cons x xs)) = p? x = #t
+		(2) p? (car (cons x xs)) = p? x = #f
+(1) : p? x = #t
+ z definicji filter :
+	(cons (car (cons (car (cons x xs)))) (filter p? (cdr (cons x xs))) (append (cdr (cons (car (cons x xs)) (filter p? (cdr (cons x xs)) (filter p? ys) = 
+	= (cons x (append  (filter p? xs) (filter p? ys))) -> z założenia infukcyjnego 
+	= (cons x (filter p? (append xs ys))) =
+	= (cons (car (cons x (append xs ys)) (filter p? (cdr (cons x (append xs ys)))) ->z definicji filter
+        = (filter p? (cons x (append xs ys))) =
+        = (filter p? (cons (car (cons x xs)) (append (cdr (cons x xs) ys))) ->z definicji append
+        = (filter p? (append (cons x xs) ys)) co jest równoważne lewej stronie własności P((cons x xs)) -> OK.
+(2) : p? x = #f
+analogicznie do pierwszego przypadku przekształcamy prawą stronę :
+	(cons (car (filter p? (cons x xs))) (append (cdr (filter p? (cons x xs)) (filter p? ys)) ->z definicji filter
+        = (cons (car (filter p? (cdr (cons x xs))) (append (cdr (filter p? (cdr (cons x xs))) (filter p? ys) =
+	=  (cons (car (filter p? xs)) (append (cdr (filter p? xs)) (filter p? ys)) -> z definicji append 
+	= (append (filter p? xs) (filter p? ys)) -> z założenia indukcyjnego 
+        = (filter p? (append xs ys)) = 
+	= (filter p? (cdr (cons x (append xs ys)))) -> (z warunku, że p? x = #f oraz definicji funkcji filter otrzymujemy
+        = (filter p? (cons x (append xs ys))) =
+	= (filter p? (cons (car (cons x xs)) (append (cdr (cons x xs)) ys)))-> z definicji append
+	= (filter p? (append (cons x xs) ys)) co jest równoważne lewej stronie własności P((cons x xs)) ->OK.
+
+Zatem doprowadziliśmy do postaci takiej, że prawa i lewa strona własności P((cons x xs)) są równoważne, zatem na mocy zasady indukcji dla list
+dostajemy, że dla dowolnego xs (takiego, że zachodzi (list? xs)) zachodzi P(xs).

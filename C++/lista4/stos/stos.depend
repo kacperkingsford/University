@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1585822109 source:/home/kacper/Pulpit/programowanie/C++/lista4/stos/main.cpp
+	"stos.hpp"
+	<iostream>
+
+1585821325 /home/kacper/Pulpit/programowanie/C++/lista4/stos/stos.hpp
+	<string>
+
+1585821826 source:/home/kacper/Pulpit/programowanie/C++/lista4/stos/stos.cpp
+	"stos.hpp"
+	<iostream>
+
