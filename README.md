@@ -1,4 +1,4 @@
-Semestr I
+##Semestr I
 
     Wstęp do programowania w języku C
         wykład: Marek Piotrów
@@ -16,7 +16,7 @@ Semestr I
         wykład: Piotr Wieczorek
         pracownia: Piotr Wieczorek
 
-Semestr II
+##Semestr II
 
     Metody programowania:
         wykład: Filip Sieczkowski, Maciej Piróg, Marek Materzok
