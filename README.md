@@ -1,36 +1,35 @@
-##Semestr I
-
-    Wstęp do programowania w języku C
+# Semestr I
+* Wstęp do programowania w języku C
         wykład: Marek Piotrów
         pracownia: Marek Szykuła
-    Logika dla informatyków
+* Logika dla informatyków
         wykład: Witold Charatonik
         ćwiczenia: rotacja
-    Analiza matematyczna:
+* Analiza matematyczna:
         wykład: Maciej Paluszyński
         ćwiczenia: Yuriy Kryakin
-    Wstęp do informatyki:
+* Wstęp do informatyki:
         wykład: Tomasz Jurdziński
         ćwiczenia: Marek Piotrów
-    Podstawowy warsztat informatyka:
+* Podstawowy warsztat informatyka:
         wykład: Piotr Wieczorek
         pracownia: Piotr Wieczorek
 
-##Semestr II
+# Semestr II
 
-    Metody programowania:
+* Metody programowania:
         wykład: Filip Sieczkowski, Maciej Piróg, Marek Materzok
         ćwiczenio-pracownia: Filip Sieczkowski
-    Algebra:
+* Algebra:
         wykład: Artur Jeż
         ćwiczenia: Jan Kowalski
-    Kurs języka C++
+* Kurs języka C++
         wykład: Paweł Rzechonek
         pracownia: Michał Gańczorz
-    Programowanie Obiektowe:
+* Programowanie Obiektowe:
         wykład: Marcin Młotkowski
         pracownia: Robert Kraus
-    Logika Cyfrowa:
+* Logika Cyfrowa:
         wykład: Marek Materzok
         ćwiczenia: Marek Materzok
 
