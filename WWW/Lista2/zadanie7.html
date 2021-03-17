@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Zadanie7_Lista2</title>
+
+        <style>
+            input[type=text]{
+
+            width:150px;background-color:grey; color:#000; border: 3px solid white;
+            -webkit-transition:width 3s, background-color 2s, color 3s, border 2s,margin-top 2s, margin-bottom 2s; 
+            }   
+
+            input[type=text]:focus{
+                width:300px; background-color:white; border: 3px solid grey;
+                margin-top:12px;
+                margin-bottom:12px;
+            }
+
+            input[type=submit]{
+             margin-left: 3px;
+             height:25px;
+             width: 75px;   
+             background-color: white;
+             color:black;
+             cursor: pointer;
+             -webkit-transition: height 3s, width 3s, text-shadow 2s, font-size 2s;
+            }
+            input[type=submit]:hover
+            {
+                width:150px;
+                height:50px;
+                font-size:large;
+                text-shadow: 10px 8px 5px grey  ;
+            }
+            
+        </style>
+     </head>
+     <body>
+         
+        <form>
+            <label for="name">Imię</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="lastname">Nazwisko</label><br>
+            <input type="text" id="lastname" name="lastname"><br>
+            <label for="address">Adres</label><br>
+            <input type="text" id="address" name="address"><br><br>
+            <input type="submit" id="send" value="Wyślij!"> 
+        </form>
+
+     </body>

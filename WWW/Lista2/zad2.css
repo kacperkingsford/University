@@ -1,0 +1,42 @@
+div {
+    background-color: red;
+    width: 300px;
+    padding: 50px;
+    border: 4px blue dotted;
+    margin: 10px 10px 10px 10px;
+}
+
+span {
+    background-color: lightblue;
+    color: darkred;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+    border: 4px red dotted;
+}
+
+span.a {
+    display: inline; 
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;  
+    background-color: yellow; 
+}
+
+span.b {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;  
+    background-color: yellow; 
+}
+
+span.c{
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;  
+    background-color: yellow; 
+}

@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Definicja liczby $\pi $}{2}%
+\contentsline {subsection}{\numberline {1.1}Obliczanie $\pi $ jako sumy szeregu $\DOTSB \sum@ \slimits@ _{k=0}^{\infty } (-1)^{k} (2k+1)^{-1}$}{2}%
+\contentsline {subsection}{\numberline {1.2}Błąd sumowania $n$ liczb}{3}%
+\contentsline {section}{\numberline {2}Opis eksperymentu i wyniki}{4}%
+\contentsline {subsection}{\numberline {2.1}Wyniki obliczeń oraz ich analiza}{5}%

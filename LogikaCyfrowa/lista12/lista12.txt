@@ -1,0 +1,68 @@
+Kacper Kingsford 315348
+deklaruje zadania 1-8.
+zad1.
+
+add x5, x6, x7
+addi x5, x5, -5
+
+zad2.
+
+x1 = x2 + x3 + x4
+
+zad3.
+
+sub x27, x28, x29
+lb x12, x27(x10)
+sb x12, 8(x11)
+
+zad4.
+
+x30: a x12: A[0] x5: b x6: c x31: A[c]
+a = A[8]+b
+A[c] = a
+
+zad5.
+
+lw x3, 0x4(x27)
+
+zad6.
+
+sw x5, 32(x30)
+
+S-FORMAT
+
+imm[4:0]:         00000
+func3:            010
+rs1:              11110
+rs2:              00101
+opkod:            0100011
+imm[11:5]:        0000001
+
+0000 0010 0101 1111 0010 0000 0010 0011
+
+zad7.
+
+ 0000 0000 0001  0000 1000 0000 1011 0011
+ rd: 0000 1        1
+ funct3: 000       add
+ rs1: 0000 1       1
+ rs2: 0 0001       1
+ opkod: 011 0011   R
+ funct3: 0000 000  add
+ 
+ 
+ add x1 x1 x1
+
+zad8.
+
+a)
+x7 = 1010101010100000
+x6 = 10010001101000101011001111000
+
+or x7 x6 = 0x1234FEF8
+
+b)
+
+x7 = 000101010101
+
+andi x7, x7, 0xfef = 0x145

@@ -1,0 +1,8 @@
+.in:hover {
+	background-color: gray;
+	transition: 1s;
+}
+
+span {
+	background-color: red;
+}

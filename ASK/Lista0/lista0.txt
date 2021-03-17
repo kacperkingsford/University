@@ -1,0 +1,51 @@
+Zad1
+
+42 (8) = 100010 (2) =  22 (16) = 34 (10)
+255 (8) = 010101101 (2) = AD (16) = 173 (10)
+3047 (8) = 011000100111 (2) = 627 (16) = 6*16^2 + 2*16 + 7 = 1575 (10)
+140336 (8) = 001100000011011110 (2) = C0DE (16) = 12*16^3 + 0 + 13*16 + 14 = 49374 (10)
+
+Zad2
+Pisemnie:
+
+22 + 8 = 2A
+73 + 2C = 9F
+7F + 7F = FE
+C2 + A4 = 166
+
+Zad3
+
+x = x & ~(1 << k)
+x = x | (1 << k)
+x = x ^ (1 << k)
+
+Zad4
+
+x = x << y
+x = x >> y
+? 
+?
+
+Zad5
+
+x = x & (x - 1);
+
+
+Zad6
+
+Big endian - forma zapisu danych, w której najbardziej znaczący bajt umieszczany jest jako pierwszy.
+Little endian - forma zapisu danych, w której najmniej znaczący bajt umieszczany jest jako pierwszy.
+
+x = ((x << 24) & 0xFF000000 ) | ((x << 8) & 0x00FF0000) | ((x >> 8) & 0x0000FF00) | ((x >> 24) & 0x000000FF);
+
+Zad7
+
+Kod sterujący – kod, który w danym kodowaniu znaków nie przenosi informacji o samym znaku, ale służy do sterowania urządzeniem przetwarzającym dane, np. drukarką itp.
+
+0 - NULL (brak informacji)
+4 - End of Transmission
+7 - Bell
+10 -Line Feed (koniec linii)
+12 - Form Feed (nowa strona)
+
+

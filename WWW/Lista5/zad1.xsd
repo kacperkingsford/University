@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="acc_check">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{26}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="pesel_check">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{11}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="birthday_check">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([0-2][0-9]|(3)[0-1])(\/|.)(((0)[0-9])|((1)[0-2]))(\/|.)[0-9]{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="email_check">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="validate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="accnumb" type="acc_check" />
+        <xs:element name="pesel" type="pesel_check" />
+        <xs:element name="birthday" type="birthday_check" />
+        <xs:element name="email" type="email_check" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+</xs:schema>

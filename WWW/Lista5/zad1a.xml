@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<validate>
+    <accnumb>12345678901234567890123456</accnumb>
+    <pesel>00324302932</pesel>
+    <birthday>22.12.2000</birthday>
+    <email>kacper.k@interia.pl</email>
+</validate>

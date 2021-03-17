@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title> Zadanie1 </title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var str;
+
+            $('#searchphrase').change(function () {
+                str = $('#searchphrase').val();
+                var rysuj;
+
+                if (($("li:contains('" + str + "')").length != 0) && (str.length >= 3)) {
+                    rysuj = true;
+                }
+                else {
+                    rysuj = false;
+                }
+
+                $('#items').children().each(function () {
+
+                    if (rysuj) {
+                        $('#items').css("color", "gray");
+                        $(this).html($(this).text().replaceAll(str, '<span style="color:yellow;">' + str + '</span>'));
+                    }
+                    else {
+                        $('#items').css("color", "black");
+                        $('span').css("color", "black");
+                    }
+                });
+            });
+
+        });
+
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <ul id="items">
+        <li>pierwsza pozycja</li>
+        <li>druga pozycja</li>
+        <li>trzecia pozycja</li>
+        <li>czwarta pozycja</li>
+    </ul>
+
+    <input type="text" id="searchphrase">
+
+</body>
+
+</html>

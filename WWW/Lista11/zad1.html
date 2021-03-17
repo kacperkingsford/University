@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type='text/javascript'>
+        var map;
+        var directionsManager;
+
+        function GetMap() {
+            var map = new Microsoft.Maps.Map('#myMap', {
+                credentials: 'AoGZHeeAnm_OWKzoZfWjCGs7XaeYIYTmxqlfmPi_njmKQe_iuhg0S10N-JQY8TpQ',
+                mapTypeId: Microsoft.Maps.MapTypeId.road,
+            });
+            Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
+                directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
+
+                var HomeWaipoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Dom', location: new Microsoft.Maps.Location(51.110277, 17.125801) });
+                directionsManager.addWaypoint(HomeWaipoint);
+
+                var randomWaipoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Pralena Karwińska' });
+                directionsManager.addWaypoint(randomWaipoint);
+
+                var IIWaypoint = new Microsoft.Maps.Directions.Waypoint({ address: 'Wrocław Instytut Informatyki' });
+                directionsManager.addWaypoint(IIWaypoint);
+
+                directionsManager.setRequestOptions({
+                    distanceUnit: Microsoft.Maps.Directions.DistanceUnit.km,
+                    routeAvoidance: [Microsoft.Maps.Directions.RouteAvoidance.avoidToll] //unika płatnej autostrady
+                });
+
+                directionsManager.setRenderOptions({
+                    itineraryContainer: '#directionsItinerary',
+                    drivingPolylineOptions: {
+                        strokeColor: 'blue',
+                        strokeThickness: 3
+                    }
+                });
+
+                directionsManager.calculateDirections();
+            });
+        }
+    </script>
+      <style>
+        html, body{
+            padding:0;
+            margin:0;
+            height:100%;
+        }
+
+        .directionsContainer{
+            width:380px;
+            height:100%;
+            overflow-y:auto;
+            float:left;
+        }
+
+        #myMap{
+            position:relative;
+            width:calc(100% - 380px);
+            height:100%;
+            float:left;
+        }
+    </style>
+    <script type='text/javascript'
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AoGZHeeAnm_OWKzoZfWjCGs7XaeYIYTmxqlfmPi_njmKQe_iuhg0S10N-JQY8TpQ'
+        async defer></script>
+</head>
+
+<body>
+    <div class="directionsContainer">
+        <div id='directionsItinerary'></div>
+    </div>
+    <div id="myMap"></div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type='text/javascript'>
+        var map, trafficManager;
+
+        function GetMap() {
+            var map = new Microsoft.Maps.Map('#myMap', {
+                credentials: 'AoGZHeeAnm_OWKzoZfWjCGs7XaeYIYTmxqlfmPi_njmKQe_iuhg0S10N-JQY8TpQ',
+                mapTypeId: Microsoft.Maps.MapTypeId.road,
+                center: new Microsoft.Maps.Location(51.106583, 17.034263),
+                zoom: 13
+            });
+            Microsoft.Maps.loadModule('Microsoft.Maps.Traffic', function () {
+                trafficManager = new Microsoft.Maps.Traffic.TrafficManager(map);
+
+
+                trafficManager.showLegend();
+                trafficManager.showFlow();
+                trafficManager.showIncidents()
+            });
+        }
+    </script>
+    <script type='text/javascript'
+        src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AoGZHeeAnm_OWKzoZfWjCGs7XaeYIYTmxqlfmPi_njmKQe_iuhg0S10N-JQY8TpQ'
+        async defer></script>
+</head>
+
+<body>
+    <div id="myMap" style="position:relative;width:100%;height:100%;"></div>
+</body>
+
+</html>

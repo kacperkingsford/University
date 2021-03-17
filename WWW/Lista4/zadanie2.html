@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title> Zadanie2 </title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            var adverbs = ['appropriately', 'assertively', ' authoritatively', 'collaboratively', 'compellingly', 'competently'];
+            var verbs = [' actualize ', ' benchmark ', ' develop ', ' enhance ',' expedite ',' facilitate '];
+            var adjectives = [' accurate',' backend',' client-based',' compelling',' frictionless',' emerging'];
+            var nouns = [' best practices',' e-business',' e-markets','products',' scenarios','sources'];
+
+           $(document).ready(function() {
+               $('#generateBtn').click(function () {
+                var item1 = adverbs[Math.floor(Math.random() * adverbs.length)];
+                var item2 = verbs[Math.floor(Math.random() * verbs.length)];
+                var item3 = adjectives[Math.floor(Math.random() * adjectives.length)];
+                var item4 = nouns[Math.floor(Math.random() * nouns.length)];
+                $('#randomWords').val(item1 +' ' + item2 + ' ' + item3 + ' ' + item4);
+               });
+
+           });
+        </script>
+    </head>
+    <body>
+
+        <button id="generateBtn">Generate!</button>
+        <input type="text" id="randomWords" size="60px">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td valign="top">
+                    <form>
+                        <table border="0" cellpadding="0" cellspacing="1" width="100%">
+                            <tr>
+                                <td>
+                                    <table border="0" cellpadding="3" cellspacing="1" width="100%">
+                                        <tr>
+                                            <td>
+                                                <nobr><strong>Adverbs</strong></nobr>
+                                            </td>
+
+                                            <td>
+                                                <nobr><strong>Verbs</strong></nobr>
+                                            </td>
+                                            <td>
+                                                <nobr><strong>Adjectives</strong></nobr>
+                                            </td>
+                                            <td>
+                                                <nobr><strong>Nouns</strong></nobr>
+                                            </td>
+                                        </tr>
+                                        <tr id="wordsTable">
+                                            <script>
+                                                $(function () {
+                                                    var words = [adverbs, verbs, adjectives, nouns];
+                                                    var content = '<td align="left">';
+                                                    for (i = 0; i <= 3; i++) {
+                                                        words[i].forEach(elem => {
+                                                            content += elem + '<br />';
+                                                        });
+                                                        if(i < 3)
+                                                            content += '</td>\n<td>';
+                                                        else content += '</td>';
+                                                    }
+                                                    $('#wordsTable').append(content);
+                                                });
+                                            </script>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+    </body>
+</html>

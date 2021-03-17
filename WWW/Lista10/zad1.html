@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Zadanie1</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script type="text/javascript" src="ajax.js"></script>
+        <link rel="stylesheet" href="zad1.css">
+        <script type="text/javascript">
+            function onClick() {
+                var request = Ajax();
+                request.onreadystatechange =
+                    function () {
+                        if (request.readyState == 4 && request.status == 200) {
+                                document.getElementById("result").innerHTML = request.responseText;
+                                request = false;
+                        }
+                    }
+                request.open("GET", "zad1.php?login=" + document.getElementById("login").value + "&haslo=" + document.getElementById("haslo").value +
+                    "&haslo_2=" + document.getElementById("haslo_2").value);
+                request.send(null);
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <form name="loginForm">
+            Login <br>
+            <input class="in" type="text" name="login" id="login" value=""> <br>
+            Hasło <br>
+            <input class="in" type="password" name="haslo" id="haslo" value=""> <br>
+            Powtórz Hasło <br>
+            <input class="in" type="password" name="haslo_2" id="haslo_2" value=""> <br>
+            <input type="button" onclick="onClick();" value="OK" /> <br>
+            <span id="result"></span><br>
+        </form>
+
+    </body>
+</html>

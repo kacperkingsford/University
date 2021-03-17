@@ -1,0 +1,1 @@
+Bezstanowość oznacza że serwer rozpatruje każde żądanie niezależnie od inncyh, nie szukając żadnych powiązań między nimi.

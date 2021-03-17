@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <title>Zadanie2</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            
+            $(document).ready(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "https://tvn24.pl/najnowsze.xml",
+                    dataType: "xml",
+                    success: xmlParser
+                });
+            });
+
+            function xmlParser(xml) {
+                
+                var newsDivs = document.getElementsByTagName("li");
+                var channel = $(xml).find('channel');
+                
+                let tytuly = [];
+                let linki = [];
+                let opisy = [];
+
+                $(channel).find('title').each(function() {
+                    tytuly.push($(this).text())
+                });
+
+                $(channel).find('link').each(function() {
+                    linki.push($(this).text())
+                });
+
+                $(channel).find('description').each(function() {
+                    opisy.push($(this).text());
+                });
+
+                $("h1").html(tytuly[0]);
+                for(let i = 0; i < 5; i++) {
+                    $(newsDivs[i]).html("<a href="+linki[i+1]+">"+tytuly[i+1]+"</a><br><div class="+ "aaa>" + opisy[i+1]+"</div>");
+                }
+
+            };
+
+        </script>
+        
+        <style>
+
+            h1 {
+                text-align: center;
+            }
+
+            li {
+                padding-top: 50px;
+            }
+
+            img {
+                width: 300px;
+                
+            }
+
+            .aaa {
+                display: flex;
+                align-items: center;
+            }
+
+        </style>
+
+        
+    </head>
+    <body>
+        <div id="main">
+            <h1></h1>
+            <ul>
+                <li id="news1">
+                </li>
+                <li id="news2">
+                </li>
+                <li id="news3">
+                </li>
+                <li id="news4">
+                </li>
+                <li id="news5">
+                </li>
+        </div>
+
+ 
+    </body>
+</html>

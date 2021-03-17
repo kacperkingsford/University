@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        div {
+            text-align: center;
+            margin: auto;
+        }
+
+        img {
+            border-color: white;
+        }
+
+        button {
+            vertical-align: top;
+            width: 120px;
+            height: 60px;
+            margin: 5px;
+        }
+    </style>
+    <title>Zadanie 3</title>
+    <script>
+        $(document).ready(function () {
+            var items = document.getElementsByTagName("img");
+            for (let i = 0; i < 16; i++) 
+            {
+                $(items[i]).data("marked", false);
+                $(items[i]).click(function () {
+                    if (!$(items[i]).data("marked")) 
+                    {
+                        $(items[i]).css("border-color", "red");
+                        $(items[i]).data("marked", true);
+                    }
+                    else 
+                    {
+                        $(items[i]).css("border-color", "white");
+                        $(items[i]).data("marked", false);
+                    }
+                })
+            }
+
+            $("#mark").click(function () {
+                for (let i = 0; i < 16; i++) {
+                    $(items[i]).css("border-color", "red");
+                    $(items[i]).data("marked", true);
+                }
+            })
+
+            $("#unmark").click(function () {
+                for (let i = 0; i < 16; i++) {
+                    $(items[i]).css("border-color", "white");
+                    $(items[i]).data("marked", false);
+                }
+            })
+
+            $("#save").click(function () {
+                $("#log").empty();
+                for (let i = 0; i < 16; i++) {
+                    if ($(items[i]).data("marked")) {
+                        $("#log").append(items[i].id + "; ");
+                    }             
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <span>
+                <img id="img1" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img2" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img3" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img4" src="./obrazek.jpg" width="150" height="200" border="5" />
+            </span>
+        </div>
+        <div>
+            <span>
+                <img id="img5" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img6" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img7" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img8" src="./obrazek.jpg" width="150" height="200" border="5" />
+            </span>
+        </div>
+        <div>
+            <span>
+                <img id="img9" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img10" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img11" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img12" src="./obrazek.jpg" width="150" height="200" border="5" />
+            </span>
+        </div>
+        <div>
+            <span>
+                <img id="img13" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img14" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img15" src="./obrazek.jpg" width="150" height="200" border="5" />
+                <img id="img16" src="./obrazek.jpg" width="150" height="200" border="5" />
+            </span>
+        </div>
+        <div>
+            <textarea id="log" cols="55" rows="4"></textarea>
+            <button id="mark" >Zaznacz<br>wszystkie</button>
+            <button id="unmark">Odznacz<br>wszystkie</button>
+            <button id="save">Zapisz</button>
+        </div>
+    </div>
+</body>
+
+</html>

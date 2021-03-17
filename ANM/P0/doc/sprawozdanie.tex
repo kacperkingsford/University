@@ -1,0 +1,65 @@
+\documentclass{article}
+
+\title{Analiza Numeryczna (M) - Lista P0}
+\date{12-10-2020}
+\author{Kacper Kingsford}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+\graphicspath{ {/Desktop/programowanie/ANM/P0/doc/} }
+\newtheorem{twierdzenie}{Twierdzenie}
+\begin{document}
+
+\maketitle
+\pagenumbering{arabic}
+
+\section{Dział}
+
+Hello World!
+
+\subsection{Poddział}
+
+Hello World!
+
+\subsection{Tabela zawierająca liczby}
+
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ $x$ & $t$ & $f(x)$ & $f(t)$ \\ [0.5ex] 
+ \hline\hline
+ 1 & 6 & 87837 & 787 \\ 
+ \hline
+ 2 & 7 & 78 & 5415 \\
+ \hline
+ 3 & 545 & 778 & 7507 \\
+ \hline
+ 4 & 545 & 18744 & 7560 \\
+ \hline
+ 5 & 88 & 788 & 6344 \\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Wykres}
+
+Przykładowy wykres:
+\begin{center}
+\includegraphics[scale=0.4]{plot.png}
+\end{center}
+
+
+\subsection{Twierdzenie Taylora}
+
+\begin{twierdzenie}
+Załóżmy, że funkcja f ma pochodne wszystkich rzędów w pewnym otoczeniu U punktu $x_{0}$. Szereg:
+\[ \sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!} (x-x_0)^n = f(x_0) + \frac{f'(x_0)}{1!} (x-x_0) + \frac{f''(x_0)}{2!} (x-x_0)^2+ ... \]
+nazywamy Szeregiem Taylora funkcji f w otoczeniu punktu $x_0$.
+\end{twierdzenie}
+
+
+
+\end{document}

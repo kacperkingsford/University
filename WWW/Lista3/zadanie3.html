@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #container {
+        width: 450px;
+        height: 130px;
+        position: relative;
+        background: yellowgreen;
+    }
+
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+    }
+</style>
+
+<body>
+
+
+    <div id="container">
+        <div id="animate"></div>
+        <div id="animate" style="left: 80px; background-color: rgb(113, 113, 233);"></div>
+        <div id="animate" style="left: 160px; background-color: rgb(128, 47, 0);"></div>
+        <div id="animate" style="left: 240px; background-color: rgb(31, 195, 100);"></div>
+        <div id="animate" style="left: 320px; background-color: rgb(177, 20, 177);"></div>
+        <div id="animate" style="left: 400px; background-color: rgb(13, 149, 202);"></div>
+    </div>
+
+    <script>
+        function myMove(i, elem, down, back) {
+            for (let x = 1; x < i; x++) {
+                elem = elem.nextElementSibling;
+            }
+
+            var pos;
+            var id;
+            if (down) {
+                pos = 0;
+                id = setInterval(frame_up, 5);
+            }
+            else if (!down) {
+                pos = 80;
+                id = setInterval(frame_down, 5);
+            }
+
+            function frame_down() {
+
+                if (pos <= 0) {
+                    clearInterval(id);
+                }
+                else {
+                    pos-=2;
+                    elem.style.top = pos + "px";
+                }
+
+            }
+
+            function frame_up() {
+
+                if (pos >= 80) {
+                    clearInterval(id);
+                }
+                else {
+                    pos+=2;
+                    elem.style.top = pos + "px";
+                }
+
+            }
+        }
+
+        function next() {
+            var elem = document.getElementById("animate");
+            var incr = 0;
+            var down;
+            var back;
+
+            down = true;
+            back = false;
+
+
+            for (let a = 1; a < 7; a++) {
+                setTimeout(myMove, incr, a, elem, down, back);
+                incr += 200;
+            }
+
+            down = false;
+            back = true;
+
+            for (let b = 1; b < 7; b++) {
+                setTimeout(myMove, incr, b, elem, down, back);
+                incr += 200;
+            }
+        }
+
+        function start() {
+            next();
+            setInterval(next, 2400);
+        }
+
+        start();
+
+    </script>
+
+</body>
+
+</html>

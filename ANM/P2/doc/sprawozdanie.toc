@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Metody całkowania numerycznego}{2}%
+\contentsline {subsection}{\numberline {1.1}Metoda złożonych trapezów}{2}%
+\contentsline {subsection}{\numberline {1.2}Metoda Romberga}{3}%
+\contentsline {section}{\numberline {2}Analiza błędu}{5}%
+\contentsline {section}{\numberline {3}Opis eksperymentu oraz analiza wyników}{6}%
+\contentsline {subsection}{\numberline {3.1}Porównanie wyników}{6}%
+\contentsline {subsection}{\numberline {3.2}Funkcja Rungego}{7}%

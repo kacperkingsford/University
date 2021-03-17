@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Zadanie 2</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body onload="init()">
+        <div class="container">
+            <form>
+                <label for="marka">Marka:</label><br>
+                <select name="marka" id="marka" onchange="updateModel()">
+                </select><br>
+
+                <label for="model">Model:</label><br>
+                <select name="model" id="model">
+                    <option value=""></option>
+                </select><br>
+
+                <label for="pozycja">Nowa pozycja:</label>
+                <input type="text" id="pozycja" name="pozycja">
+
+                <p>Chcę dodać:</p>
+                <input type="radio" id="markaRadio" name="rodzaj" checked="checked">
+                <label for="markaRadio">Marka</label> <br>
+                <input type="radio" id="modelRadio" name="rodzaj">
+                <label for="modelRadio">Model</label> <br>
+
+                <input type="submit" id="submit" value="Dodaj pozycję" onclick="return addElement()">
+            </form>
+        </div>
+    </body>
+
+    <script src="script2.js">
+    </script>
+</html>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Ćwiczenia 2 z ASK, grupa AKr (11.03.2021) - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled comment-inner" data-hard-breaks="true"><h1 id="Ćwiczenia-2-z-ASK-grupa-AKr-11032021" data-id="Ćwiczenia-2-z-ASK-grupa-AKr-11032021"><a class="anchor hidden-xs" href="#Ćwiczenia-2-z-ASK-grupa-AKr-11032021" title="Ćwiczenia-2-z-ASK-grupa-AKr-11032021"><span class="octicon octicon-link"></span></a><span>Ćwiczenia 2 z ASK, grupa AKr (11.03.2021)</span></h1><h2 id="Deklaracje-do-1215" data-id="Deklaracje-do-1215"><a class="anchor hidden-xs" href="#Deklaracje-do-1215" title="Deklaracje-do-1215"><span class="octicon octicon-link"></span></a><span>Deklaracje (do 12:15)</span></h2><div class="alert alert-info">
+<p><span>Gotowość rozwiązania zadania należy wyrazić poprzez postawienie X w odpowiedniej kolumnie.</span><br>
+<span>Dopisz do poniższej tabelki wiersz z deklarowanymi przez Ciebie zadaniami, koniecznie </span><strong><span>przed</span></strong><span> godziną </span><strong><span>12:15</span></strong><span>. O tej godzinie zostaną wybrane osoby do opracowania konkretnych zadań. Zostaną one oznaczone przez pogrubienie </span><strong><span>X</span></strong><span>.</span><br>
+<span>W trakcie wypełniania deklaracji można oznaczyć znakiem </span><mark><span>X</span></mark><span> na żółtym tle co najwyżej jedno zadanie, które autor chciałby zreferować podczas dyskusji nad rozwiązaniami.</span></p>
+</div><table>
+<thead>
+<tr>
+<th><span>imię i nazwisko</span></th>
+<th style="text-align:center"><span>1</span></th>
+<th style="text-align:center"><span>2</span></th>
+<th style="text-align:center"><span>3</span></th>
+<th style="text-align:center"><span>4</span></th>
+<th style="text-align:center"><span>5</span></th>
+<th style="text-align:center"><span>6</span></th>
+<th style="text-align:center"><span>7</span></th>
+<th style="text-align:center"><span>8</span></th>
+<th style="text-align:center"><span>9</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span>Bartosz Sobocki</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Paweł Zmarzły</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><strong><mark><span>x</span></mark></strong></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Jacek Kowalski</span></td>
+<td style="text-align:center"><strong><span>x</span></strong></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Kacper Kingsford</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+<td style="text-align:center"><strong><span>x</span></strong></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Michał Sobecki</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><strong><span>x</span></strong></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Marek Padlewski</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><strong><span>x</span></strong></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Krystian Sańczyk</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Michał Wójtowicz</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Karol Guzikowski</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+<td style="text-align:center"><strong><span>x</span></strong></td>
+</tr>
+<tr>
+<td><span>Artur Jankowski</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Marcelina Oset</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+</tr>
+<tr>
+<td><span>Damian Kowalik</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Maria Wyrzykowska</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+</tr>
+<tr>
+<td><span>Karol Mirek</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><strong><span>x</span></strong></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Bogusz Kaszowski</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><strong><span>x</span></strong></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td><span>Kacper Gawdziński</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><mark><span>x</span></mark></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+<tr>
+<td><span>Mateusz Leonowicz</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><strong><mark><span>x</span></mark></strong></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+<td style="text-align:center"><span>x</span></td>
+</tr>
+</tbody>
+</table><h2 id="Rozwiązania-1215---1230" data-id="Rozwiązania-1215---1230"><a class="anchor hidden-xs" href="#Rozwiązania-1215---1230" title="Rozwiązania-1215---1230"><span class="octicon octicon-link"></span></a><span>Rozwiązania (12:15 - 12:30)</span></h2><div class="alert alert-info">
+<p><span>Studenci wybrani do opracowania zadań powinni w ciągu tych 15 minut uzupełnić ich rozwiązania.</span></p>
+</div><h3 id="Zadanie-1" data-id="Zadanie-1"><a class="anchor hidden-xs" href="#Zadanie-1" title="Zadanie-1"><span class="octicon octicon-link"></span></a><span>Zadanie 1</span></h3><div class="alert alert-info">
+<p><span>Autor: Jacek Kowalski</span></p>
+</div><div class="alert alert-info">
+<p><span>Czy poniższe wyrażenia zawsze obliczą się do prawdy dla dwóch dowolnych wartości zmiennych «x» i «y» typu «int32_t»? Jeśli nie to podaj wartości, które prowadzą do obliczenia fałszu.</span><br>
+<span>• </span><code>(x &gt; 0) || (x - 1 &lt; 0)</code><br>
+<span>• </span><code>(x &amp; 7) != 7 || (x &lt;&lt; 29 &lt; 0)</code><br>
+<span>• </span><code>(x * x) &gt;= 0</code><br>
+<span>• </span><code>x &lt; 0 || -x &lt;= 0</code><br>
+<span>• </span><code>x &gt; 0 || -x &gt;= 0</code><br>
+<span>• </span><code>(x | -x) &gt;&gt; 31 == -1</code><br>
+<span>• </span><code>x + y == (uint32_t)y + (uint32_t)x</code><br>
+<span>• </span><code>x * ~y + (uint32_t)y * (uint32_t)x == -x</code></p>
+</div><ul>
+<li><code>(x &gt; 0) || (x - 1 &lt; 0)</code>
+<ul>
+<li><code>x = INT_MIN</code></li>
+</ul>
+</li>
+<li><code>(x &amp; 7) != 7 || (x &lt;&lt; 29 &lt; 0)</code>
+<ul>
+<li><span>Zawsze spełnione: 0…0111 =&gt; 1110…0</span></li>
+</ul>
+</li>
+<li><code>(x * x) &gt;= 0</code>
+<ul>
+<li><code>x = USHRT_MAX</code></li>
+</ul>
+</li>
+<li><code>x &lt; 0 || -x &lt;= 0</code>
+<ul>
+<li><span>Zawsze spełnione</span></li>
+</ul>
+</li>
+<li><code>x &gt; 0 || -x &gt;= 0</code>
+<ul>
+<li><code>x = INT_MIN</code></li>
+</ul>
+</li>
+<li><code>(x | -x) &gt;&gt; 31 == -1</code>
+<ul>
+<li><code>x = 0</code></li>
+</ul>
+</li>
+<li><code>x + y == (uint32_t)y + (uint32_t)x</code>
+<ul>
+<li><span>Zawsze spełnione co do reprezentacji bitowej</span></li>
+</ul>
+</li>
+<li><code>x * ~y + (uint32_t)y * (uint32_t)x == -x</code>
+<ul>
+<li><span>Zawsze spełnione</span></li>
+</ul>
+</li>
+</ul><p><span>Do ostatniego punktu:</span><br>
+<code>x * (~y + y) == x * -1</code></p><h3 id="Zadanie-2" data-id="Zadanie-2"><a class="anchor hidden-xs" href="#Zadanie-2" title="Zadanie-2"><span class="octicon octicon-link"></span></a><span>Zadanie 2</span></h3><div class="alert alert-info">
+<p><span>Autor: Kacper Kingsford</span></p>
+</div><div class="alert alert-info">
+<p><span>Napisz ciąg instrukcji, który bez użycia dodatkowych zmiennych, zamieni miejscami zawartość zmiennych «x» i «y».</span><br>
+<span>Wskazówka: Spróbuj rozwiązać zadanie samodzielnie, a następnie przeczytaj §2.19 książki „Uczta programistów”.</span></p>
+</div><p><img src="https://i.imgur.com/BXnq3GI.png" alt=""></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span></div><div class="code">x <span class="token operator">=</span> x <span class="token operator">^</span> y<span class="token punctuation">;</span>
+y <span class="token operator">=</span> y <span class="token operator">^</span> x<span class="token punctuation">;</span>
+x <span class="token operator">=</span> x <span class="token operator">^</span> y<span class="token punctuation">;</span>
+</div></div></code></pre><p><span>Czemu to działa?</span></p><ul>
+<li><span>x = x ^ y</span></li>
+<li><span>y = y ^ (x ^ y) = (xor jest rozłączny i przemienny) = (y ^ y) ^ x = 0 ^ x = x</span></li>
+<li><span>x = x ^ y = (x ^ y) ^ x = y ^ (x ^ x) = y ^ 0 = y</span></li>
+</ul><h3 id="Zadanie-3" data-id="Zadanie-3"><a class="anchor hidden-xs" href="#Zadanie-3" title="Zadanie-3"><span class="octicon octicon-link"></span></a><span>Zadanie 3</span></h3><div class="alert alert-info">
+<p><span>Autor: Bogusz Kaszowski</span></p>
+</div><div class="alert alert-info">
+<p><span>Napisz wyrażenie zawierające wyłącznie zmienne « x », « y » i « s », którego wartością logiczną jest odpowiedź na pytanie czy wykonanie instrukcji « s = x + y » spowodowało </span><strong><span>nadmiar</span></strong><span> (ang. overflow) lub </span><strong><span>niedomiar</span></strong><span> (ang. underflow).</span><br>
+<span>Wskazówka: Spróbuj rozwiązać zadanie samodzielnie, a następnie przeczytaj §2.12 książki „Uczta programistów”.</span></p>
+</div><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span></div><div class="code">s <span class="token operator">=</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+<span class="token punctuation">(</span>s<span class="token operator">^</span>y<span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token punctuation">(</span>s<span class="token operator">^</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&gt;&gt;</span> <span class="token number">31</span> <span class="token operator">&amp;</span> <span class="token number">1</span>
+</div></div></code></pre><h3 id="Zadanie-4" data-id="Zadanie-4"><a class="anchor hidden-xs" href="#Zadanie-4" title="Zadanie-4"><span class="octicon octicon-link"></span></a><span>Zadanie 4</span></h3><div class="alert alert-info">
+<p><span>Autor: Mateusz Leonowicz</span></p>
+</div><div class="alert alert-info">
+<p><span>Zmienne « x » i « y » przechowują liczby typu « uint32_t » składające się z czterech bajtów, tj. </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-165-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi><mo>=</mo><munderover><mo>&amp;#x2211;</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mn>3</mn></munderover><msub><mi>x</mi><mi>i</mi></msub><mo>&amp;#x22C5;</mo><msup><mn>2</mn><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mn>8</mn><mi>i</mi></mrow></msup></math>" role="presentation"><span id="MJXc-Node-2439" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2440" class="mjx-mrow"><span id="MJXc-Node-2441" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-2442" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-2443" class="mjx-munderover MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-2444" class="mjx-mo"><span class="mjx-char MJXc-TeX-size1-R" style="padding-top: 0.544em; padding-bottom: 0.544em;">∑</span></span></span><span class="mjx-stack" style="vertical-align: -0.31em;"><span class="mjx-sup" style="font-size: 70.7%; padding-bottom: 0.411em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-2450" class="mjx-mn" style=""><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">3</span></span></span><span class="mjx-sub" style="font-size: 70.7%; padding-right: 0.071em;"><span id="MJXc-Node-2445" class="mjx-texatom" style=""><span id="MJXc-Node-2446" class="mjx-mrow"><span id="MJXc-Node-2447" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span><span id="MJXc-Node-2448" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-2449" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span></span></span></span><span id="MJXc-Node-2451" class="mjx-msubsup MJXc-space1"><span class="mjx-base"><span id="MJXc-Node-2452" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-2453" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span></span></span><span id="MJXc-Node-2454" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋅</span></span><span id="MJXc-Node-2455" class="mjx-msubsup MJXc-space2"><span class="mjx-base"><span id="MJXc-Node-2456" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">2</span></span></span><span class="mjx-sup" style="font-size: 70.7%; vertical-align: 0.591em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-2457" class="mjx-texatom" style=""><span id="MJXc-Node-2458" class="mjx-mrow"><span id="MJXc-Node-2459" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">8</span></span><span id="MJXc-Node-2460" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span></span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>=</mo><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mn>3</mn></munderover><msub><mi>x</mi><mi>i</mi></msub><mo>⋅</mo><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mn>8</mn><mi>i</mi></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-165">x = \sum_{i=0}^3 x_i \cdot 2^{8i}</script></span><span> oraz </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-166-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>y</mi><mo>=</mo><munderover><mo>&amp;#x2211;</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mn>3</mn></munderover><msub><mi>y</mi><mi>i</mi></msub><mo>&amp;#x22C5;</mo><msup><mn>2</mn><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mn>8</mn><mi>i</mi></mrow></msup></math>" role="presentation"><span id="MJXc-Node-2461" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2462" class="mjx-mrow"><span id="MJXc-Node-2463" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.495em; padding-right: 0.006em;">y</span></span><span id="MJXc-Node-2464" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-2465" class="mjx-munderover MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-2466" class="mjx-mo"><span class="mjx-char MJXc-TeX-size1-R" style="padding-top: 0.544em; padding-bottom: 0.544em;">∑</span></span></span><span class="mjx-stack" style="vertical-align: -0.31em;"><span class="mjx-sup" style="font-size: 70.7%; padding-bottom: 0.411em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-2472" class="mjx-mn" style=""><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">3</span></span></span><span class="mjx-sub" style="font-size: 70.7%; padding-right: 0.071em;"><span id="MJXc-Node-2467" class="mjx-texatom" style=""><span id="MJXc-Node-2468" class="mjx-mrow"><span id="MJXc-Node-2469" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span><span id="MJXc-Node-2470" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-2471" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span></span></span></span><span id="MJXc-Node-2473" class="mjx-msubsup MJXc-space1"><span class="mjx-base" style="margin-right: -0.006em;"><span id="MJXc-Node-2474" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.495em; padding-right: 0.006em;">y</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-2475" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span></span></span><span id="MJXc-Node-2476" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋅</span></span><span id="MJXc-Node-2477" class="mjx-msubsup MJXc-space2"><span class="mjx-base"><span id="MJXc-Node-2478" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">2</span></span></span><span class="mjx-sup" style="font-size: 70.7%; vertical-align: 0.591em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-2479" class="mjx-texatom" style=""><span id="MJXc-Node-2480" class="mjx-mrow"><span id="MJXc-Node-2481" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">8</span></span><span id="MJXc-Node-2482" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span></span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mn>3</mn></munderover><msub><mi>y</mi><mi>i</mi></msub><mo>⋅</mo><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mn>8</mn><mi>i</mi></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-166">y = \sum_{i=0}^3 y_i \cdot 2^{8i}</script></span><span>. Jak szybko obliczyć </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-167-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>z</mi><mo>=</mo><munderover><mo>&amp;#x2211;</mo><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mn>3</mn></munderover><msub><mi>z</mi><mi>i</mi></msub><mo>&amp;#x22C5;</mo><msup><mn>2</mn><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mn>8</mn><mi>i</mi></mrow></msup></math>" role="presentation"><span id="MJXc-Node-2483" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2484" class="mjx-mrow"><span id="MJXc-Node-2485" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em; padding-right: 0.003em;">z</span></span><span id="MJXc-Node-2486" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-2487" class="mjx-munderover MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-2488" class="mjx-mo"><span class="mjx-char MJXc-TeX-size1-R" style="padding-top: 0.544em; padding-bottom: 0.544em;">∑</span></span></span><span class="mjx-stack" style="vertical-align: -0.31em;"><span class="mjx-sup" style="font-size: 70.7%; padding-bottom: 0.411em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-2494" class="mjx-mn" style=""><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">3</span></span></span><span class="mjx-sub" style="font-size: 70.7%; padding-right: 0.071em;"><span id="MJXc-Node-2489" class="mjx-texatom" style=""><span id="MJXc-Node-2490" class="mjx-mrow"><span id="MJXc-Node-2491" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span><span id="MJXc-Node-2492" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-2493" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span></span></span></span><span id="MJXc-Node-2495" class="mjx-msubsup MJXc-space1"><span class="mjx-base" style="margin-right: -0.003em;"><span id="MJXc-Node-2496" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em; padding-right: 0.003em;">z</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-2497" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span></span></span><span id="MJXc-Node-2498" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋅</span></span><span id="MJXc-Node-2499" class="mjx-msubsup MJXc-space2"><span class="mjx-base"><span id="MJXc-Node-2500" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">2</span></span></span><span class="mjx-sup" style="font-size: 70.7%; vertical-align: 0.591em; padding-left: 0px; padding-right: 0.071em;"><span id="MJXc-Node-2501" class="mjx-texatom" style=""><span id="MJXc-Node-2502" class="mjx-mrow"><span id="MJXc-Node-2503" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">8</span></span><span id="MJXc-Node-2504" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span></span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>z</mi><mo>=</mo><munderover><mo>∑</mo><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mn>3</mn></munderover><msub><mi>z</mi><mi>i</mi></msub><mo>⋅</mo><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mn>8</mn><mi>i</mi></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-167">z = \sum_{i=0}^3 z_i \cdot 2^{8i}</script></span><span> gdzie </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-168-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msub><mi>z</mi><mi>i</mi></msub><mo>=</mo><msub><mi>x</mi><mi>i</mi></msub><mo>&amp;#x2295;</mo><msub><mi>y</mi><mi>i</mi></msub></math>" role="presentation"><span id="MJXc-Node-2505" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2506" class="mjx-mrow"><span id="MJXc-Node-2507" class="mjx-msubsup"><span class="mjx-base" style="margin-right: -0.003em;"><span id="MJXc-Node-2508" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em; padding-right: 0.003em;">z</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-2509" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span></span></span><span id="MJXc-Node-2510" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-2511" class="mjx-msubsup MJXc-space3"><span class="mjx-base"><span id="MJXc-Node-2512" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-2513" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span></span></span><span id="MJXc-Node-2514" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.445em;">⊕</span></span><span id="MJXc-Node-2515" class="mjx-msubsup MJXc-space2"><span class="mjx-base" style="margin-right: -0.006em;"><span id="MJXc-Node-2516" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.495em; padding-right: 0.006em;">y</span></span></span><span class="mjx-sub" style="font-size: 70.7%; vertical-align: -0.212em; padding-right: 0.071em;"><span id="MJXc-Node-2517" class="mjx-mi" style=""><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span></span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>z</mi><mi>i</mi></msub><mo>=</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⊕</mo><msub><mi>y</mi><mi>i</mi></msub></math></span></span><script type="math/tex" id="MathJax-Element-168">z_i = x_i ⊕ y_i</script></span><span> , gdy:</span><br>
+<span>• ⊕ jest operacją dodawania,</span><br>
+<span>• ⊕ jest operacją odejmowania.</span><br>
+<span>Obliczając wynik należy zapobiec wystąpieniu </span><strong><span>przeniesienia</span></strong><span> (ang. carry) lub </span><strong><span>pożyczki</span></strong><span> (ang. borrow) propagującego się do bardziej znaczącego bajtu.</span><br>
+<span>Wskazówka: Spróbuj rozwiązać zadanie samodzielnie, a następnie przeczytaj §2.17 książki „Uczta programistów”.</span></p>
+</div><p><span>Dodawanie:</span></p><p><span>Dodajemy wszystkie bity, poza tymi najbardziej znaczącymi, aby się nie rozpropagowały</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span></div><div class="code">r <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">&amp;</span> <span class="token number">0x7F7F7F7F</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>y <span class="token operator">&amp;</span> <span class="token number">0x7F7F7F7F</span><span class="token punctuation">)</span>
+</div></div></code></pre><p><span>Teraz musimy dodać bit znaczący, ale tylko pod warunkiem, że nie został już on tam włączony i że nie jest on włączony jednocześnie w x i y</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span></div><div class="code">r <span class="token operator">=</span> r <span class="token operator">^</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">^</span> y<span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0x80808080</span><span class="token punctuation">)</span>
+</div></div></code></pre><p><span>Odejmowanie:</span></p><p><span>Rozważmy przypadki, pokażę że jest to poprawne rozwiązanie</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span></div><div class="code">r <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">|</span> <span class="token number">0x80808080</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span>y <span class="token operator">&amp;</span> <span class="token number">0x7F7F7F7F</span><span class="token punctuation">)</span>
+r <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">~</span><span class="token punctuation">(</span>x <span class="token operator">^</span> y<span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0x80808080</span><span class="token punctuation">)</span> <span class="token operator">^</span> r<span class="token punctuation">)</span>
+
+</div></div></code></pre><p><span>Jeśli bit znaczący w x = 1, a w y = 1</span><br>
+<span>To najpierw odejmujemy od siebie zwykczajnie liczby, oprócz najstarszego bitu, czyli 2^7</span><br>
+<span>Czyli robimy zwykłe odejmowanie na początku, ale musimy jeszcze odjąć brakujące 2^7. Czyli flipujemy najstarszy bit.</span></p><p><span>Jeśli bit znaczący w x = 1, a w y = 0</span><br>
+<span>Jest to zwyczajne odejmowanie.</span></p><p><span>Jeśli bit znaczący w x = 0, a w y = 0</span><br>
+<span>Dodajemy do x 2^7, a na końcu je odejmujemy, więc wynik się zgadza.</span></p><p><span>Jeśli bit znaczący w x = 0, a w y = 1</span><br>
+<span>Dodajemy do x 2^7, a z y zabieramy 2^7. Na koniec musimy w takim razie zabrać 2*2^7 = 2^8, ale ponieważ jest to za duża liczba, to nic to nie zmieni.</span></p><h3 id="Zadanie-5" data-id="Zadanie-5"><a class="anchor hidden-xs" href="#Zadanie-5" title="Zadanie-5"><span class="octicon octicon-link"></span></a><span>Zadanie 5</span></h3><div class="alert alert-info">
+<p><span>Autor: Paweł Zmarzły</span></p>
+</div><div class="alert alert-info">
+<p><span>Uzupełnij ciało funkcji zadeklarowanej następująco:</span></p>
+<pre><code class="cpp hljs"><span class="token comment">/* Oblicz x * 3 / 4 zaokrąglając w dół. */</span>
+<span class="token keyword">int32_t</span> <span class="token function">threefourths</span><span class="token punctuation">(</span><span class="token keyword">int32_t</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><span>Nie można dopuścić do wystąpienia nadmiaru i niedomiaru!</span></p>
+</div><p><img src="https://i.imgur.com/xOaAOsK.png" alt=""></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span>
+<span data-linenumber="11"></span>
+<span data-linenumber="12"></span>
+<span data-linenumber="13"></span>
+<span data-linenumber="14"></span>
+<span data-linenumber="15"></span>
+<span data-linenumber="16"></span>
+<span data-linenumber="17"></span>
+<span data-linenumber="18"></span>
+<span data-linenumber="19"></span>
+<span data-linenumber="20"></span>
+<span data-linenumber="21"></span>
+<span data-linenumber="22"></span></div><div class="code">int32_t <span class="token function">threefourths</span><span class="token punctuation">(</span>int32_t x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>x <span class="token operator">&amp;</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> testcase <span class="token operator">=</span> <span class="token operator">-</span>INT32_MAX<span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Wynik przy liczeniu na longach: %lld\n"</span><span class="token punctuation">,</span>
+         <span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span><span class="token punctuation">(</span>testcase<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">3</span> <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Wynik double: %lf\n"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span><span class="token punctuation">(</span>testcase<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">3.</span> <span class="token operator">/</span> <span class="token number">4.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Wynik double (floor): %lld\n"</span><span class="token punctuation">,</span>
+         <span class="token punctuation">(</span><span class="token keyword">long</span><span class="token punctuation">)</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span><span class="token punctuation">(</span>testcase<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">3.</span> <span class="token operator">/</span> <span class="token number">4.</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Nasz wynik: %d\n"</span><span class="token punctuation">,</span> <span class="token function">threefourths</span><span class="token punctuation">(</span>testcase<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">long</span> i <span class="token operator">=</span> INT32_MIN<span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> INT32_MAX<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">threefourths</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token function">floor</span><span class="token punctuation">(</span>i <span class="token operator">*</span> <span class="token number">3.</span> <span class="token operator">/</span> <span class="token number">4.</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%ld\n"</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">assert</span><span class="token punctuation">(</span>false<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><h3 id="Zadanie-6" data-id="Zadanie-6"><a class="anchor hidden-xs" href="#Zadanie-6" title="Zadanie-6"><span class="octicon octicon-link"></span></a><span>Zadanie 6</span></h3><div class="alert alert-info">
+<p><span>Autor: Michał Sobecki</span></p>
+</div><div class="alert alert-info">
+<p><span>Podaj wyrażenie zawierające wyłącznie zmienne « x » i « y », którego wartością logiczną jest wynik porównania «x &lt; y» dla liczb (a) bez znaku (b) ze znakiem.</span><br>
+<span>Wskazówka: Spróbuj rozwiązać zadanie samodzielnie, a następnie przeczytaj §2.11 książki „Uczta programistów”.</span></p>
+</div><p><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-337-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi><mo>&amp;lt;</mo><mi>y</mi><mo>==&amp;gt;</mo><mi>x</mi><mo>&amp;#x2212;</mo><mi>y</mi><mo>&amp;lt;</mo><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3644" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3645" class="mjx-mrow"><span id="MJXc-Node-3646" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3647" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.249em; padding-bottom: 0.396em;">&lt;</span></span><span id="MJXc-Node-3648" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.495em; padding-right: 0.006em;">y</span></span><span id="MJXc-Node-3649" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.249em; padding-bottom: 0.052em;">=<span class="mjx-charbox MJXc-TeX-main-R" style="padding-bottom: 0.314em;">=</span><span class="mjx-charbox MJXc-TeX-main-R" style="padding-bottom: 0.314em;">&gt;</span></span></span><span id="MJXc-Node-3650" class="mjx-mi MJXc-space3"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3651" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-3652" class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.495em; padding-right: 0.006em;">y</span></span><span id="MJXc-Node-3653" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.249em; padding-bottom: 0.396em;">&lt;</span></span><span id="MJXc-Node-3654" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mi>y</mi><mo>==&gt;</mo><mi>x</mi><mo>−</mo><mi>y</mi><mo>&lt;</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-337">x < y ==> x - y < 0</script></span></p><p><span>Można zauważyć, że </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-338-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo>/</mo></mrow><mn>2</mn><mo>&amp;#x2212;</mo><mi>y</mi><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo>/</mo></mrow><mn>2</mn></math>" role="presentation"><span id="MJXc-Node-3655" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3656" class="mjx-mrow"><span id="MJXc-Node-3657" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3658" class="mjx-texatom"><span id="MJXc-Node-3659" class="mjx-mrow"><span id="MJXc-Node-3660" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.593em;">/</span></span></span></span><span id="MJXc-Node-3661" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">2</span></span><span id="MJXc-Node-3662" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-3663" class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.495em; padding-right: 0.006em;">y</span></span><span id="MJXc-Node-3664" class="mjx-texatom"><span id="MJXc-Node-3665" class="mjx-mrow"><span id="MJXc-Node-3666" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.593em;">/</span></span></span></span><span id="MJXc-Node-3667" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">2</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mrow class="MJX-TeXAtom-ORD"><mo>/</mo></mrow><mn>2</mn><mo>−</mo><mi>y</mi><mrow class="MJX-TeXAtom-ORD"><mo>/</mo></mrow><mn>2</mn></math></span></span><script type="math/tex" id="MathJax-Element-338">x/2 - y/2</script></span><span> da nam ten sam bit znaku co </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-339-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi><mo>&amp;#x2212;</mo><mi>y</mi></math>" role="presentation"><span id="MJXc-Node-3668" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3669" class="mjx-mrow"><span id="MJXc-Node-3670" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3671" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-3672" class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.495em; padding-right: 0.006em;">y</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>−</mo><mi>y</mi></math></span></span><script type="math/tex" id="MathJax-Element-339">x - y</script></span><span> poza przypadkiem takim, że </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-340-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi></math>" role="presentation"><span id="MJXc-Node-3673" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3674" class="mjx-mrow"><span id="MJXc-Node-3675" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-340">x</script></span><span> jest parzysty, a </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-341-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>y</mi></math>" role="presentation"><span id="MJXc-Node-3676" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3677" class="mjx-mrow"><span id="MJXc-Node-3678" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.495em; padding-right: 0.006em;">y</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span></span><script type="math/tex" id="MathJax-Element-341">y</script></span><span> nieparzysty.</span></p><p><span>2 - 3 </span><img class="emoji" alt=":x:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/x.png"></p><p><span>2 - 5 </span><img class="emoji" alt=":heavy_check_mark:" src="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/images/basic/heavy_check_mark.png"></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span></div><div class="code">bool <span class="token function">lessthan</span><span class="token punctuation">(</span>T x<span class="token punctuation">,</span> T y<span class="token punctuation">)</span> <span class="token comment">// dla T == (uint32_t || int32_t)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span>y <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token operator">~</span>x <span class="token operator">&amp;</span> y <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&gt;&gt;</span> <span class="token number">31</span> <span class="token operator">&amp;</span> <span class="token number">1</span>  <span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><span>(~x &amp; y &amp; 1) - naprawia przypadek parzysta - nieparzysta (np 2 - 3)</span></p><table>
+<thead>
+<tr>
+<th style="text-align:center"><span>ostatni bit x</span></th>
+<th style="text-align:center"><span>ostatni bit y</span></th>
+<th style="text-align:center"><span>Wynik</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-342-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3679" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3680" class="mjx-mrow"><span id="MJXc-Node-3681" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-342">0</script></span></td>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-343-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3682" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3683" class="mjx-mrow"><span id="MJXc-Node-3684" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-343">0</script></span></td>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-344-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3685" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3686" class="mjx-mrow"><span id="MJXc-Node-3687" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-344">0</script></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-345-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3688" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3689" class="mjx-mrow"><span id="MJXc-Node-3690" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-345">0</script></span></td>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-346-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1</mn></math>" role="presentation"><span id="MJXc-Node-3691" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3692" class="mjx-mrow"><span id="MJXc-Node-3693" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-346">1</script></span></td>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-347-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1</mn></math>" role="presentation"><span id="MJXc-Node-3694" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3695" class="mjx-mrow"><span id="MJXc-Node-3696" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-347">1</script></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-348-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1</mn></math>" role="presentation"><span id="MJXc-Node-3697" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3698" class="mjx-mrow"><span id="MJXc-Node-3699" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-348">1</script></span></td>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-349-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3700" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3701" class="mjx-mrow"><span id="MJXc-Node-3702" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-349">0</script></span></td>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-350-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3703" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3704" class="mjx-mrow"><span id="MJXc-Node-3705" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-350">0</script></span></td>
+</tr>
+<tr>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-351-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1</mn></math>" role="presentation"><span id="MJXc-Node-3706" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3707" class="mjx-mrow"><span id="MJXc-Node-3708" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-351">1</script></span></td>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-352-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1</mn></math>" role="presentation"><span id="MJXc-Node-3709" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3710" class="mjx-mrow"><span id="MJXc-Node-3711" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-352">1</script></span></td>
+<td style="text-align:center"><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-353-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3712" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3713" class="mjx-mrow"><span id="MJXc-Node-3714" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-353">0</script></span></td>
+</tr>
+</tbody>
+</table><h3 id="Zadanie-7" data-id="Zadanie-7"><a class="anchor hidden-xs" href="#Zadanie-7" title="Zadanie-7"><span class="octicon octicon-link"></span></a><span>Zadanie 7</span></h3><div class="alert alert-info">
+<p><span>Autor: Marek Padlewski</span></p>
+</div><div class="alert alert-info">
+<p><span>Podaj fragment kodu, który oblicza funkcję:</span><br>
+<span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="mjx-chtml MJXc-display" style="text-align: center;"><span id="MathJax-Element-354-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; text-align: center; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mi>a</mi><mi>b</mi><mi>s</mi><mo stretchy=&quot;false&quot;>(</mo><mi>x</mi><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mrow><mo>{</mo><mtable columnalign=&quot;left left&quot; rowspacing=&quot;.2em&quot; columnspacing=&quot;1em&quot; displaystyle=&quot;false&quot;><mtr><mtd><mi>x</mi></mtd><mtd><mrow><mtext>dla&amp;#xA0;</mtext><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>x</mi><mo>&amp;#x2265;</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd><mo>&amp;#x2212;</mo><mi>x</mi></mtd><mtd><mrow><mtext>dla&amp;#xA0;</mtext><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>x</mi><mo>&amp;lt;</mo><mn>0</mn></mrow></mrow></mtd></mtr></mtable><mo fence=&quot;true&quot; stretchy=&quot;true&quot; symmetric=&quot;true&quot;></mo></mrow></math>" role="presentation"><span id="MJXc-Node-3715" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3716" class="mjx-mrow"><span id="MJXc-Node-3717" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">a</span></span><span id="MJXc-Node-3718" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.495em; padding-bottom: 0.298em;">b</span></span><span id="MJXc-Node-3719" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">s</span></span><span id="MJXc-Node-3720" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.593em;">(</span></span><span id="MJXc-Node-3721" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3722" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.593em;">)</span></span><span id="MJXc-Node-3723" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-3724" class="mjx-mrow MJXc-space3"><span id="MJXc-Node-3725" class="mjx-mo"><span class="mjx-char MJXc-TeX-size3-R" style="padding-top: 1.233em; padding-bottom: 1.233em;">{</span></span><span id="MJXc-Node-3726" class="mjx-mtable" style="vertical-align: -0.85em; padding: 0px 0.167em;"><span class="mjx-table"><span id="MJXc-Node-3727" class="mjx-mtr" style="height: 1.1em;"><span id="MJXc-Node-3728" class="mjx-mtd" style="padding: 0px 0.5em 0px 0px; text-align: left; width: 1.35em;"><span id="MJXc-Node-3729" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-3730" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span class="mjx-strut"></span></span></span><span id="MJXc-Node-3731" class="mjx-mtd" style="padding: 0px 0px 0px 0.5em; text-align: left; width: 3.99em;"><span id="MJXc-Node-3732" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-3733" class="mjx-mrow"><span id="MJXc-Node-3734" class="mjx-mtext"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">dla&nbsp;</span></span><span id="MJXc-Node-3735" class="mjx-texatom"><span id="MJXc-Node-3736" class="mjx-mrow"><span id="MJXc-Node-3737" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3738" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.347em; padding-bottom: 0.495em;">≥</span></span><span id="MJXc-Node-3739" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span></span><span class="mjx-strut"></span></span></span></span><span id="MJXc-Node-3740" class="mjx-mtr" style="height: 1.1em;"><span id="MJXc-Node-3741" class="mjx-mtd" style="padding: 0.1em 0.5em 0px 0px; text-align: left;"><span id="MJXc-Node-3742" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-3743" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-3744" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span class="mjx-strut"></span></span></span><span id="MJXc-Node-3745" class="mjx-mtd" style="padding: 0.1em 0px 0px 0.5em; text-align: left;"><span id="MJXc-Node-3746" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-3747" class="mjx-mrow"><span id="MJXc-Node-3748" class="mjx-mtext"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">dla&nbsp;</span></span><span id="MJXc-Node-3749" class="mjx-texatom"><span id="MJXc-Node-3750" class="mjx-mrow"><span id="MJXc-Node-3751" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3752" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.249em; padding-bottom: 0.396em;">&lt;</span></span><span id="MJXc-Node-3753" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span></span><span class="mjx-strut"></span></span></span></span></span></span><span id="MJXc-Node-3754" class="mjx-mo" style="width: 0.12em;"></span></span></span></span><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>a</mi><mi>b</mi><mi>s</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false"><mtr><mtd><mi>x</mi></mtd><mtd><mrow><mtext>dla&nbsp;</mtext><mrow class="MJX-TeXAtom-ORD"><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd><mo>−</mo><mi>x</mi></mtd><mtd><mrow><mtext>dla&nbsp;</mtext><mrow class="MJX-TeXAtom-ORD"><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mrow></mtd></mtr></mtable><mo fence="true" stretchy="true" symmetric="true"></mo></mrow></math></span></span></span><script type="math/tex; mode=display" id="MathJax-Element-354">
+\begin{equation}
+  abs(x) =
+    \begin{cases}
+      x & \text{dla $x ≥ 0$}\\
+      -x & \text{dla $x < 0$}\end{cases}       
+\end{equation}
+</script></span></p>
+<p><span>Skorzystaj z następującej własności: jeśli « b » jest wartością logiczną, to wyrażenie </span><code>b ? x : y</code><span> można przetłumaczyć do </span><code>b * x + !b * y</code><span>.</span><br>
+<span>Wskazówka: Spróbuj rozwiązać zadanie samodzielnie, a następnie przeczytaj §2.4 książki „Uczta programistów”.</span></p>
+</div><p><span>Własność: </span><code>b ? x : y</code><span> możemy przetłumaczyć do </span><code>b * x + !b * y</code></p><p><mark><span>Rozwiązanie używające wskazówki (nielegalne):</span></mark></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span></div><div class="code"><span class="token comment">// b = 0 jeśli x jest &gt;= 0</span>
+<span class="token comment">// b = 1 jeśli x jest &lt;  0</span>
+
+<span class="token keyword">int</span> abs <span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    y <span class="token operator">=</span> <span class="token operator">-</span>x<span class="token punctuation">;</span>
+    b <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span> <span class="token number">31</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">1</span>
+ <span class="token keyword">return</span> <span class="token operator">!</span>b <span class="token operator">*</span> x <span class="token operator">+</span> b <span class="token operator">*</span> y<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</div></div></code></pre><p><mark><span>Rozwiązanie z książki (nielegalne):</span></mark></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span></div><div class="code"><span class="token keyword">int</span> abs <span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span> <span class="token number">30</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> x<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><span>Przesuwając </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-384-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi></math>" role="presentation"><span id="MJXc-Node-4027" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-4028" class="mjx-mrow"><span id="MJXc-Node-4029" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-384">x</script></span><span> o 30 bitów i ORując z </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-385-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1</mn></math>" role="presentation"><span id="MJXc-Node-4030" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-4031" class="mjx-mrow"><span id="MJXc-Node-4032" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-385">1</script></span><span> otrzymamy </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-386-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1111</mn><mo>&amp;#x22EF;</mo><mn>1111</mn></math>" role="presentation"><span id="MJXc-Node-4033" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-4034" class="mjx-mrow"><span id="MJXc-Node-4035" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1111</span></span><span id="MJXc-Node-4036" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋯</span></span><span id="MJXc-Node-4037" class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1111</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1111</mn><mo>⋯</mo><mn>1111</mn></math></span></span><script type="math/tex" id="MathJax-Element-386">1111\cdots1111</script></span><span> dla liczby ujemnej lub </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-387-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0000</mn><mo>&amp;#x22EF;</mo><mn>0001</mn></math>" role="presentation"><span id="MJXc-Node-4038" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-4039" class="mjx-mrow"><span id="MJXc-Node-4040" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0000</span></span><span id="MJXc-Node-4041" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋯</span></span><span id="MJXc-Node-4042" class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0001</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0000</mn><mo>⋯</mo><mn>0001</mn></math></span></span><script type="math/tex" id="MathJax-Element-387">0000\cdots0001</script></span><span> dla liczby dodatniej.</span><br>
+<span>Czyli ostatecznie robimy </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-393-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo stretchy=&quot;false&quot;>(</mo><mo>&amp;#x2212;</mo><mn>1</mn><mo stretchy=&quot;false&quot;>)</mo><mo>&amp;#x00D7;</mo><mi>x</mi></math>" role="presentation"><span id="MJXc-Node-4079" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-4080" class="mjx-mrow"><span id="MJXc-Node-4081" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.593em;">(</span></span><span id="MJXc-Node-4082" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-4083" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span><span id="MJXc-Node-4084" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.593em;">)</span></span><span id="MJXc-Node-4085" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.199em; padding-bottom: 0.347em;">×</span></span><span id="MJXc-Node-4086" class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">(</mo><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>×</mo><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-393">(-1)\times x</script></span><span> jeśli </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-409-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi><mo>&amp;lt;</mo><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-4156" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-4157" class="mjx-mrow"><span id="MJXc-Node-4158" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-4159" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.249em; padding-bottom: 0.396em;">&lt;</span></span><span id="MJXc-Node-4160" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-409">x<0</script></span><span> lub </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-413-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1</mn><mo>&amp;#x00D7;</mo><mi>x</mi></math>" role="presentation"><span id="MJXc-Node-4179" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-4180" class="mjx-mrow"><span id="MJXc-Node-4181" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span><span id="MJXc-Node-4182" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.199em; padding-bottom: 0.347em;">×</span></span><span id="MJXc-Node-4183" class="mjx-mi MJXc-space2"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mo>×</mo><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-413">1\times x</script></span><span> jeśli </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-411-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi><mo>&amp;#x2265;</mo><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-4168" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-4169" class="mjx-mrow"><span id="MJXc-Node-4170" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-4171" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.347em; padding-bottom: 0.495em;">≥</span></span><span id="MJXc-Node-4172" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≥</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-411">x\geq0</script></span><span>.</span></p><p><mark><span>Rozwiązanie nie używające wskazówki:</span></mark></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span></div><div class="code"><span class="token keyword">int</span> abs <span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> mask <span class="token operator">=</span> x <span class="token operator">&gt;&gt;</span> <span class="token number">31</span><span class="token punctuation">;</span>
+    x <span class="token operator">^</span><span class="token operator">=</span> mask<span class="token punctuation">;</span>
+    x <span class="token operator">-</span><span class="token operator">=</span> mask<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> x<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><span>Przesuwając </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-370-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi></math>" role="presentation"><span id="MJXc-Node-3918" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3919" class="mjx-mrow"><span id="MJXc-Node-3920" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-370">x</script></span><span> o 31 bitów otrzymujemy liczbę binarną </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-371-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1111</mn><mo>&amp;#x22EF;</mo><mn>1111</mn></math>" role="presentation"><span id="MJXc-Node-3921" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3922" class="mjx-mrow"><span id="MJXc-Node-3923" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1111</span></span><span id="MJXc-Node-3924" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋯</span></span><span id="MJXc-Node-3925" class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1111</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1111</mn><mo>⋯</mo><mn>1111</mn></math></span></span><script type="math/tex" id="MathJax-Element-371">1111\cdots1111</script></span><span> jeśli </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-372-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi><mo>&amp;lt;</mo><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3926" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3927" class="mjx-mrow"><span id="MJXc-Node-3928" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3929" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.249em; padding-bottom: 0.396em;">&lt;</span></span><span id="MJXc-Node-3930" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>&lt;</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-372">x<0</script></span><span> lub liczbę </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-373-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0000</mn><mo>&amp;#x22EF;</mo><mn>0000</mn></math>" role="presentation"><span id="MJXc-Node-3931" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3932" class="mjx-mrow"><span id="MJXc-Node-3933" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0000</span></span><span id="MJXc-Node-3934" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋯</span></span><span id="MJXc-Node-3935" class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0000</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0000</mn><mo>⋯</mo><mn>0000</mn></math></span></span><script type="math/tex" id="MathJax-Element-373">0000\cdots0000</script></span><span> jeśli </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-374-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi><mo>&amp;#x2265;</mo><mn>0</mn></math>" role="presentation"><span id="MJXc-Node-3936" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3937" class="mjx-mrow"><span id="MJXc-Node-3938" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3939" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.347em; padding-bottom: 0.495em;">≥</span></span><span id="MJXc-Node-3940" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>≥</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-374">x\geq0</script></span><span>.</span><br>
+<span>XORowanie z maską </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-375-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1111</mn><mo>&amp;#x22EF;</mo><mn>1111</mn></math>" role="presentation"><span id="MJXc-Node-3941" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3942" class="mjx-mrow"><span id="MJXc-Node-3943" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1111</span></span><span id="MJXc-Node-3944" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋯</span></span><span id="MJXc-Node-3945" class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1111</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1111</mn><mo>⋯</mo><mn>1111</mn></math></span></span><script type="math/tex" id="MathJax-Element-375">1111\cdots1111</script></span><span> zadziała jak ~</span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-376-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi></math>" role="presentation"><span id="MJXc-Node-3946" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3947" class="mjx-mrow"><span id="MJXc-Node-3948" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-376">x</script></span><span>.</span><br>
+<span>XORowanie z maską </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-377-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0000</mn><mo>&amp;#x22EF;</mo><mn>0000</mn></math>" role="presentation"><span id="MJXc-Node-3949" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3950" class="mjx-mrow"><span id="MJXc-Node-3951" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0000</span></span><span id="MJXc-Node-3952" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋯</span></span><span id="MJXc-Node-3953" class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0000</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0000</mn><mo>⋯</mo><mn>0000</mn></math></span></span><script type="math/tex" id="MathJax-Element-377">0000\cdots0000</script></span><span> nie zmieni wartości </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-378-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>x</mi></math>" role="presentation"><span id="MJXc-Node-3954" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3955" class="mjx-mrow"><span id="MJXc-Node-3956" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-378">x</script></span><span>.</span></p><p><span>Korzystając ze wzoru </span><code>-x = ~x + 1</code><span> widzimy, że aby otrzymać </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-379-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo>&amp;#x2212;</mo><mi>x</mi></math>" role="presentation"><span id="MJXc-Node-3957" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3958" class="mjx-mrow"><span id="MJXc-Node-3959" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-3960" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>−</mo><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-379">-x</script></span><span> musimy do wyniku dodać </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-380-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1</mn></math>" role="presentation"><span id="MJXc-Node-3961" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3962" class="mjx-mrow"><span id="MJXc-Node-3963" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-380">1</script></span><span>. Tak więc odejmując maskę </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-381-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>1111</mn><mo>&amp;#x22EF;</mo><mn>1111</mn></math>" role="presentation"><span id="MJXc-Node-3964" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3965" class="mjx-mrow"><span id="MJXc-Node-3966" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1111</span></span><span id="MJXc-Node-3967" class="mjx-mo MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.002em; padding-bottom: 0.298em;">⋯</span></span><span id="MJXc-Node-3968" class="mjx-mn MJXc-space1"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1111</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1111</mn><mo>⋯</mo><mn>1111</mn></math></span></span><script type="math/tex" id="MathJax-Element-381">1111\cdots1111</script></span><span> której wartość to </span><span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-382-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mo>&amp;#x2212;</mo><mn>1</mn></math>" role="presentation"><span id="MJXc-Node-3969" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3970" class="mjx-mrow"><span id="MJXc-Node-3971" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-3972" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>−</mo><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-382">-1</script></span><span> otrzymamy to co chcemy.</span></p><h3 id="Zadanie-8" data-id="Zadanie-8"><a class="anchor hidden-xs" href="#Zadanie-8" title="Zadanie-8"><span class="octicon octicon-link"></span></a><span>Zadanie 8</span></h3><div class="alert alert-info">
+<p><span>Autor: Karol Mirek</span></p>
+</div><div class="alert alert-info">
+<p><span>Podaj fragment kodu, który oblicza funkcję:</span><br>
+<span class="mathjax"><span class="MathJax_Preview" style="color: inherit;"></span><span class="mjx-chtml MJXc-display" style="text-align: center;"><span id="MathJax-Element-383-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 127%; text-align: center; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mi>s</mi><mi>i</mi><mi>g</mi><mi>n</mi><mo stretchy=&quot;false&quot;>(</mo><mi>x</mi><mo stretchy=&quot;false&quot;>)</mo><mo>=</mo><mrow><mo>{</mo><mtable columnalign=&quot;left left&quot; rowspacing=&quot;.2em&quot; columnspacing=&quot;1em&quot; displaystyle=&quot;false&quot;><mtr><mtd><mo>&amp;#x2212;</mo><mn>1</mn></mtd><mtd><mrow><mtext>dla&amp;#xA0;</mtext><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>x</mi><mo>&amp;lt;</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mtext>dla&amp;#xA0;</mtext><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>x</mi><mo>=</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mtext>dla&amp;#xA0;</mtext><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>x</mi><mo>&amp;gt;</mo><mn>0</mn></mrow></mrow></mtd></mtr></mtable><mo fence=&quot;true&quot; stretchy=&quot;true&quot; symmetric=&quot;true&quot;></mo></mrow></math>" role="presentation"><span id="MJXc-Node-3973" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-3974" class="mjx-mrow"><span id="MJXc-Node-3975" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">s</span></span><span id="MJXc-Node-3976" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.298em;">i</span></span><span id="MJXc-Node-3977" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.495em; padding-right: 0.003em;">g</span></span><span id="MJXc-Node-3978" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">n</span></span><span id="MJXc-Node-3979" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.593em;">(</span></span><span id="MJXc-Node-3980" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3981" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.593em;">)</span></span><span id="MJXc-Node-3982" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-3983" class="mjx-mrow MJXc-space3"><span id="MJXc-Node-3984" class="mjx-mo" style="vertical-align: -0.526em;"><span class="mjx-delim-v"><span class="mjx-char MJXc-TeX-size4-R" style="padding-top: 0.691em; padding-bottom: 0.298em; margin-bottom: -0.194em;">⎧</span><span class="mjx-char MJXc-TeX-size4-R" style="padding-top: 0.938em; padding-bottom: 0.938em;">⎨</span><span class="mjx-char MJXc-TeX-size4-R" style="margin-top: -0.388em; padding-bottom: 1.184em;">⎩</span></span></span><span id="MJXc-Node-3985" class="mjx-mtable" style="vertical-align: -1.45em; padding: 0px 0.167em;"><span class="mjx-table"><span id="MJXc-Node-3986" class="mjx-mtr" style="height: 1.1em;"><span id="MJXc-Node-3987" class="mjx-mtd" style="padding: 0px 0.5em 0px 0px; text-align: left; width: 1.278em;"><span id="MJXc-Node-3988" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-3989" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.298em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-3990" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span><span class="mjx-strut"></span></span></span><span id="MJXc-Node-3991" class="mjx-mtd" style="padding: 0px 0px 0px 0.5em; text-align: left; width: 3.99em;"><span id="MJXc-Node-3992" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-3993" class="mjx-mrow"><span id="MJXc-Node-3994" class="mjx-mtext"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">dla&nbsp;</span></span><span id="MJXc-Node-3995" class="mjx-texatom"><span id="MJXc-Node-3996" class="mjx-mrow"><span id="MJXc-Node-3997" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-3998" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.249em; padding-bottom: 0.396em;">&lt;</span></span><span id="MJXc-Node-3999" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span></span><span class="mjx-strut"></span></span></span></span><span id="MJXc-Node-4000" class="mjx-mtr" style="height: 1.2em;"><span id="MJXc-Node-4001" class="mjx-mtd" style="padding: 0.1em 0.5em 0px 0px; text-align: left;"><span id="MJXc-Node-4002" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-4003" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span><span class="mjx-strut"></span></span></span><span id="MJXc-Node-4004" class="mjx-mtd" style="padding: 0.1em 0px 0px 0.5em; text-align: left;"><span id="MJXc-Node-4005" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-4006" class="mjx-mrow"><span id="MJXc-Node-4007" class="mjx-mtext"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">dla&nbsp;</span></span><span id="MJXc-Node-4008" class="mjx-texatom"><span id="MJXc-Node-4009" class="mjx-mrow"><span id="MJXc-Node-4010" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-4011" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.101em; padding-bottom: 0.298em;">=</span></span><span id="MJXc-Node-4012" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span></span><span class="mjx-strut"></span></span></span></span><span id="MJXc-Node-4013" class="mjx-mtr" style="height: 1.1em;"><span id="MJXc-Node-4014" class="mjx-mtd" style="padding: 0.1em 0.5em 0px 0px; text-align: left;"><span id="MJXc-Node-4015" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-4016" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">1</span></span><span class="mjx-strut"></span></span></span><span id="MJXc-Node-4017" class="mjx-mtd" style="padding: 0.1em 0px 0px 0.5em; text-align: left;"><span id="MJXc-Node-4018" class="mjx-mrow" style="margin-top: -0.2em;"><span id="MJXc-Node-4019" class="mjx-mrow"><span id="MJXc-Node-4020" class="mjx-mtext"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">dla&nbsp;</span></span><span id="MJXc-Node-4021" class="mjx-texatom"><span id="MJXc-Node-4022" class="mjx-mrow"><span id="MJXc-Node-4023" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.199em; padding-bottom: 0.298em;">x</span></span><span id="MJXc-Node-4024" class="mjx-mo MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.249em; padding-bottom: 0.396em;">&gt;</span></span><span id="MJXc-Node-4025" class="mjx-mn MJXc-space3"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.396em; padding-bottom: 0.347em;">0</span></span></span></span></span><span class="mjx-strut"></span></span></span></span></span></span><span id="MJXc-Node-4026" class="mjx-mo" style="width: 0.12em;"></span></span></span></span><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>s</mi><mi>i</mi><mi>g</mi><mi>n</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left" rowspacing=".2em" columnspacing="1em" displaystyle="false"><mtr><mtd><mo>−</mo><mn>1</mn></mtd><mtd><mrow><mtext>dla&nbsp;</mtext><mrow class="MJX-TeXAtom-ORD"><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mtext>dla&nbsp;</mtext><mrow class="MJX-TeXAtom-ORD"><mi>x</mi><mo>=</mo><mn>0</mn></mrow></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mtext>dla&nbsp;</mtext><mrow class="MJX-TeXAtom-ORD"><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow></mtd></mtr></mtable><mo fence="true" stretchy="true" symmetric="true"></mo></mrow></math></span></span></span><script type="math/tex; mode=display" id="MathJax-Element-383"> 
+\begin{equation}
+  sign(x) =
+    \begin{cases}
+      -1 & \text{dla $x < 0$}\\
+      0 & \text{dla $x = 0$}\\
+      1 & \text{dla $x > 0$} 
+      \end{cases} 
+\end{equation}
+</script></span><br>
+<span>Wskazówka: Spróbuj rozwiązać zadanie samodzielnie, a następnie przeczytaj §2.7 książki „Uczta programistów”.</span></p>
+</div><p><span>Funkcja która działa dla wszystkich liczb oprócz INT_MIN</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span></div><div class="code">int32_t <span class="token function">sign</span><span class="token punctuation">(</span>int32_t x<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span> <span class="token number">31</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token punctuation">(</span><span class="token operator">-</span>x <span class="token operator">&gt;&gt;</span> <span class="token number">31</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><span>Dla x &gt; 0:</span></p><pre><code>    x &gt;&gt; 31 = 0
+    -x &gt;&gt; 31 = -1 
+    0-(-1) = 1
+</code></pre><p><span>Dla x = 0:</span></p><pre><code>x &gt;&gt; 31 = 0
+-x &gt;&gt; 31 = 0 
+0-(-0) = 0
+</code></pre><p><span>Dla x &lt; 0:</span></p><pre><code>x &gt;&gt; 31 = -1
+-x &gt;&gt; 31 = 0
+-1 -(0) = -1
+</code></pre><h3 id="Zadanie-9" data-id="Zadanie-9"><a class="anchor hidden-xs" href="#Zadanie-9" title="Zadanie-9"><span class="octicon octicon-link"></span></a><span>Zadanie 9</span></h3><div class="alert alert-info">
+<p><span>Autor: Karol Guzikowski</span></p>
+</div><div class="alert alert-info">
+<p><span>Uzupełnij ciało funkcji zadeklarowanej poniżej.</span></p>
+<pre><code class="cpp hljs"><span class="token comment">/* Kiedy x zawiera nieparzystą liczbę jedynek zwróć 1, w p.p. 0 */</span> 
+<span class="token keyword">int32_t</span> <span class="token function">odd_ones</span><span class="token punctuation">(</span><span class="token keyword">uint32_t</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><span>Wskazówka: Spróbuj rozwiązać zadanie samodzielnie, a następnie przeczytaj §5.2 książki „Uczta programistów”.</span></p>
+</div><p><a href="https://en.wikipedia.org/wiki/Hamming_weight" target="_blank" rel="noopener"><span>https://en.wikipedia.org/wiki/Hamming_weight</span></a></p><p><img src="https://i.imgur.com/xP9O60P.png" alt=""></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span>
+<span data-linenumber="11"></span>
+<span data-linenumber="12"></span>
+<span data-linenumber="13"></span>
+<span data-linenumber="14"></span>
+<span data-linenumber="15"></span></div><div class="code">bool <span class="token function">odd_ones</span><span class="token punctuation">(</span>uint32_t x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    uint32_t m1  <span class="token operator">=</span> <span class="token number">0x55555555</span><span class="token punctuation">;</span> <span class="token comment">// binary: 0101...</span>
+    uint32_t m2  <span class="token operator">=</span> <span class="token number">0x33333333</span><span class="token punctuation">;</span> <span class="token comment">// binary: 00110011..</span>
+    uint32_t m4  <span class="token operator">=</span> <span class="token number">0x0f0f0f0f</span><span class="token punctuation">;</span> <span class="token comment">// binary:  4 zeros,  4 ones...</span>
+    uint32_t m8  <span class="token operator">=</span> <span class="token number">0x00ff00ff</span><span class="token punctuation">;</span> <span class="token comment">// binary:  8 zeros,  8 ones...</span>
+    uint32_t m16 <span class="token operator">=</span> <span class="token number">0x0000ffff</span><span class="token punctuation">;</span> <span class="token comment">// binary: 16 zeros, 16 ones</span>
+    
+    x <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">&amp;</span> m1 <span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span>  <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> m1 <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// put count of each  2 bits into those  2 bits </span>
+    x <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">&amp;</span> m2 <span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span>  <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> m2 <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// put count of each  4 bits into those  4 bits </span>
+    x <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">&amp;</span> m4 <span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span>  <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> m4 <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// put count of each  8 bits into those  8 bits </span>
+    x <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">&amp;</span> m8 <span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span>  <span class="token number">8</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> m8 <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// put count of each 16 bits into those 16 bits </span>
+    x <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">&amp;</span> m16<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span> <span class="token number">16</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> m16<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// put count of each 32 bits into those 32 bits</span>
+    
+    <span class="token keyword">return</span> x <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><span>Inaczej:</span></p><pre><code class="c hljs"><div class="wrapper"><div class="gutter linenumber"><span data-linenumber="1"></span>
+<span data-linenumber="2"></span>
+<span data-linenumber="3"></span>
+<span data-linenumber="4"></span>
+<span data-linenumber="5"></span>
+<span data-linenumber="6"></span>
+<span data-linenumber="7"></span>
+<span data-linenumber="8"></span>
+<span data-linenumber="9"></span>
+<span data-linenumber="10"></span></div><div class="code">bool <span class="token function">odd_ones</span><span class="token punctuation">(</span>uint32_t x<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    x <span class="token operator">^</span><span class="token operator">=</span> x <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    x <span class="token operator">^</span><span class="token operator">=</span> x <span class="token operator">&gt;&gt;</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    x <span class="token operator">^</span><span class="token operator">=</span> x <span class="token operator">&gt;&gt;</span> <span class="token number">4</span><span class="token punctuation">;</span>
+    x <span class="token operator">^</span><span class="token operator">=</span> x <span class="token operator">&gt;&gt;</span> <span class="token number">8</span><span class="token punctuation">;</span>
+    x <span class="token operator">^</span><span class="token operator">=</span> x <span class="token operator">&gt;&gt;</span> <span class="token number">16</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">return</span> x <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</div></div></code></pre><p><span>Powyższe funkcje zwracają true jeśli ta liczba jedynek liczba jest nieparzysta</span></p><h2 id="Prezentacja-rozwiązań-1230---1400" data-id="Prezentacja-rozwiązań-1230---1400"><a class="anchor hidden-xs" href="#Prezentacja-rozwiązań-1230---1400" title="Prezentacja-rozwiązań-1230---1400"><span class="octicon octicon-link"></span></a><span>Prezentacja rozwiązań (12:30 - 14:00)</span></h2></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#Ćwiczenia-2-z-ASK-grupa-AKr-11032021" title="Ćwiczenia 2 z ASK, grupa AKr (11.03.2021)">Ćwiczenia 2 z ASK, grupa AKr (11.03.2021)</a><ul class="nav">
+<li><a href="#Deklaracje-do-1215" title="Deklaracje (do 12:15)">Deklaracje (do 12:15)</a></li>
+<li class=""><a href="#Rozwiązania-1215---1230" title="Rozwiązania (12:15 - 12:30)">Rozwiązania (12:15 - 12:30)</a><ul class="nav">
+<li><a href="#Zadanie-1" title="Zadanie 1">Zadanie 1</a></li>
+<li><a href="#Zadanie-2" title="Zadanie 2">Zadanie 2</a></li>
+<li><a href="#Zadanie-3" title="Zadanie 3">Zadanie 3</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4">Zadanie 4</a></li>
+<li><a href="#Zadanie-5" title="Zadanie 5">Zadanie 5</a></li>
+<li><a href="#Zadanie-6" title="Zadanie 6">Zadanie 6</a></li>
+<li class=""><a href="#Zadanie-7" title="Zadanie 7">Zadanie 7</a></li>
+<li><a href="#Zadanie-8" title="Zadanie 8">Zadanie 8</a></li>
+<li><a href="#Zadanie-9" title="Zadanie 9">Zadanie 9</a></li>
+</ul>
+</li>
+<li><a href="#Prezentacja-rozwiązań-1230---1400" title="Prezentacja rozwiązań (12:30 - 14:00)">Prezentacja rozwiązań (12:30 - 14:00)</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#Ćwiczenia-2-z-ASK-grupa-AKr-11032021" title="Ćwiczenia 2 z ASK, grupa AKr (11.03.2021)">Ćwiczenia 2 z ASK, grupa AKr (11.03.2021)</a><ul class="nav">
+<li><a href="#Deklaracje-do-1215" title="Deklaracje (do 12:15)">Deklaracje (do 12:15)</a></li>
+<li class=""><a href="#Rozwiązania-1215---1230" title="Rozwiązania (12:15 - 12:30)">Rozwiązania (12:15 - 12:30)</a><ul class="nav">
+<li><a href="#Zadanie-1" title="Zadanie 1">Zadanie 1</a></li>
+<li><a href="#Zadanie-2" title="Zadanie 2">Zadanie 2</a></li>
+<li><a href="#Zadanie-3" title="Zadanie 3">Zadanie 3</a></li>
+<li><a href="#Zadanie-4" title="Zadanie 4">Zadanie 4</a></li>
+<li><a href="#Zadanie-5" title="Zadanie 5">Zadanie 5</a></li>
+<li><a href="#Zadanie-6" title="Zadanie 6">Zadanie 6</a></li>
+<li class=""><a href="#Zadanie-7" title="Zadanie 7">Zadanie 7</a></li>
+<li><a href="#Zadanie-8" title="Zadanie 8">Zadanie 8</a></li>
+<li><a href="#Zadanie-9" title="Zadanie 9">Zadanie 9</a></li>
+</ul>
+</li>
+<li><a href="#Prezentacja-rozwiązań-1230---1400" title="Prezentacja rozwiązań (12:30 - 14:00)">Prezentacja rozwiązań (12:30 - 14:00)</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
